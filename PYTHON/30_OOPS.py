@@ -265,7 +265,7 @@ class students:
         return cls.school    
 
     @staticmethod   # DECORATOR
-    def info():         # STATIC METHOD (keep it blank since static method has got nothing to do with instance and class variables)
+    def info():         # STATIC METHOD (keep it blank since static method has got nothing to do with instance and class variables). It is a method that has no relationship with class or instance variables, it just deals with the parameters given.
         print("This is a static method...")
     
 Ankan = students(55,48,98)

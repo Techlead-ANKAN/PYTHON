@@ -106,10 +106,30 @@ for i in range(int(length/2)):
 for j in range(int(length/2),length):
     r7 += s7[j].upper()
 
-
 print(r7)
 
-# Python program to capitalize the first and last character of each word in a string
+# 8) Python program to capitalize the first and last character of each word in a string
+
+s8 = "Ankan is a good boy."
+L = len(s8)
+w = s8.split()[::1]
+new = []
+final = []
+rev = s8.split()[::-1]
+
+
+for words in w:
+    new.append(words.capitalize())
+
+for words in new:
+    
+
+print(new)
+
+
+
+
+
 # Python program to check if a string has at least one letter and one number
 # Python | Program to accept the strings which contains all vowels
 # Python | Count the Number of matching characters in a pair of string
