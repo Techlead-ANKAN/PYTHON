@@ -121,18 +121,66 @@ rev = s8.split()[::-1]
 for words in w:
     new.append(words.capitalize())
 
-for words in new:
-    
-
 print(new)
 
 
 
 
 
-# Python program to check if a string has at least one letter and one number
-# Python | Program to accept the strings which contains all vowels
-# Python | Count the Number of matching characters in a pair of string
+
+
+
+# 9) Python program to check if a string has at least one letter and one number
+
+s9 = "Ankan's age is 20."
+letters = "abcdefghijklmnopqrstuvwxyz"
+numbers = "0123456789"
+flag = 0
+for char in s9:
+    if char in letters or numbers:
+        flag = 1
+    else:
+        flag = 0
+
+
+if flag == 1:
+    print("Atleast one number and alphabet present")
+else:
+    print("Atleast one number and alphabet is not present")
+
+
+# 10) Python | Program to accept the strings which contains all vowels
+
+s10 = input("Enter a string: ")
+vowels = "aeiou"
+flag = 0
+for char in s10:
+    if char in vowels:
+        flag = 1
+    else:
+        flag = 0
+
+if flag == 1:
+    print("String accepted")
+else:
+    print("String not accepted")
+
+
+# 11) Python | Count the Number of matching characters in a pair of string
+
+s11 = "aabbcdef"
+s_11 = "axybbz"
+dup = []
+res11 = []
+for char in s11:
+    if char in s_11:
+        if char not in dup:
+            dup.append(char)
+            res11.append(char)
+
+print(f"No.of Matching characters:{len(res11)}")
+
+
 # Python program to count number of vowels using sets in given string
 # Python Program to remove all duplicates from a given string
 # Python – Least Frequent Character in String
