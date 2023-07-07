@@ -181,10 +181,71 @@ for char in s11:
 print(f"No.of Matching characters:{len(res11)}")
 
 
-# Python program to count number of vowels using sets in given string
-# Python Program to remove all duplicates from a given string
-# Python – Least Frequent Character in String
-# Python | Maximum frequency character in String
+# 12) Python program to count number of vowels using sets in given string
+s12 = "Ankan is a good boy"
+vowels = "aeiou"
+final12 = set()
+
+for char in s12:
+    if char in vowels:
+        final12.add(char)
+
+print(len(final12))
+
+# 13) Python Program to remove all duplicates from a given string
+s13 = "Ankan is a good boy"
+res13 = ""
+
+for char in s13:
+    if char not in res13:
+        res13 += char
+
+print(res13)
+
+
+
+# 14) Python – Least Frequent Character in String
+s14 = "Geeks for geeks"
+unq14 = ""
+no = []
+ch = []
+for char in s14.lower():
+    if char not in unq14:
+        unq14 += char
+        no.append((s14.lower()).count(char))
+        ch.append(char)
+
+print(ch)
+print(no)
+
+i = no.index(min(no))
+
+print(f"Maximum Frequency character: {ch[i]} and Frequency is: {no[i]}")
+
+
+
+
+
+# 15) Python | Maximum frequency character in String
+s15 = "Geeks for geeks"
+unq15 = ""
+no = []
+ch = []
+for char in s15.lower():
+    if char not in unq15:
+        unq15 += char
+        no.append((s15.lower()).count(char))
+        ch.append(char)
+
+print(ch)
+print(no)
+
+i = no.index(max(no))
+
+print(f"Maximum Frequency character: {ch[i]} and Frequency is: {no[i]}")
+        
+
+
 # Python – Odd Frequency Characters
 # Python – Specific Characters Frequency in String List
 # Python | Frequency of numbers in String
