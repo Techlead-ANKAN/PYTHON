@@ -246,12 +246,71 @@ print(f"Maximum Frequency character: {ch[i]} and Frequency is: {no[i]}")
         
 
 
-# Python – Odd Frequency Characters
-# Python – Specific Characters Frequency in String List
-# Python | Frequency of numbers in String
-# Python | Program to check if a string contains any special character
-# Generating random strings until a given string is generated
-# Find words which are greater than given length k
+# 16) Python – Odd Frequency Characters
+s15 = "Geeks for geeks"
+unq15 = ""
+no = []
+ch = []
+res15 =""
+for char in s15.lower():
+    if char not in unq15:
+        unq15 += char
+        no.append((s15.lower()).count(char))
+        ch.append(char)
+
+print(ch)
+print(no)
+
+for i in range(len(no)):
+    if no[i]!=0:
+        if no[i]%2!=0:
+            res15 += ch[i]
+
+print(res15)
+
+
+
+# 16) Python – Specific Characters Frequency in String List
+s16 = "geeksforgeeks is the best"
+l16 = ['g', 'i', 'b', 'e']
+
+for char in l16:
+    if char in s16:
+        print(f"{char} --> {s16.count(char)}")
+        s16.replace(char,"")
+
+    
+
+
+# 17) Python | Frequency of numbers in String
+s17 = "geeks4feeks is No. 1 4 geeks"
+counter = 0
+
+for char in s17:
+    if char.isnumeric():
+        counter += 1
+print(f"No. of numbers in the string are: {counter}")
+
+
+# 18) Python | Program to check if a string contains any special character
+s18 = "Geeks$ForGeeks"
+flag = 0
+for char in s18:
+    if not (char.isalpha() or (char.isdigit()) or (char == " ")):
+        flag = 1
+    else:
+        flag = 0
+    
+if flag == 1:
+    print("String not accepted")
+else:
+    print("String accepted")
+
+# 19) Generating random strings until a given string is generated
+
+
+
+# 20) Find words which are greater than given length k
 # Python program for removing i-th character from a string
 # Python program to split and join a string
 # Python | Check if a given string is binary string or not
