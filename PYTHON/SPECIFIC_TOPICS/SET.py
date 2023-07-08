@@ -3,8 +3,8 @@ SET - It is an unordered collection of unique elements.
 '''
 
 # CREATE A SET:
-# set = {1,2,True, "Ankan",25.98}
-# print(f"This is how u create a set: {set}")
+set = {1,2,True, "Ankan",25.98}
+print(f"This is how u create a set: {set}")
 
 
 # EMPTY SET:

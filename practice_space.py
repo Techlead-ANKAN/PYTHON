@@ -311,10 +311,55 @@ else:
 
 
 # 20) Find words which are greater than given length k
-# Python program for removing i-th character from a string
-# Python program to split and join a string
-# Python | Check if a given string is binary string or not
-# Python | Find all close matches of input string from a list
+s20 = "Ankan is a good boy"
+k = 3
+l20 = s20.split()[::1]
+
+for words in l20:
+    if len(words) > k:
+        print(words)
+
+
+# 21) Python program for removing i-th character from a string
+s21 = "Ankan is a good boy"
+k = int(input("enter index: "))
+for i in range(len(s21)):
+    if i == k:
+        res21 = s21.replace(s21[i], "")
+        break
+
+print(res21)
+
+
+# 22) Python program to split and join a string
+s22 = "Ankan is a good boy"
+l22 = s22.split()[::1]
+print(f"After splitting: {l22}")
+j22 = " ".join(l22)
+print(f"After joining: {j22}")
+
+# 23) python | Check if a given string is binary string or not
+s23 = "101010101"
+flag = 0
+for char in s23:
+    if (char==0) or (char==1):
+        flag = 1
+    else:
+        flag = 0
+
+if flag == 1:
+    print("Binary String")
+else:
+    print("Not a Binary String")
+
+
+# s24) Python | Find all close matches of input string from a list
+from difflib import get_close_matches
+patterns = ['ape', 'apple', 'peach', 'puppy']
+word = 'apple'
+print(get_close_matches(word, patterns))
+
+
 # Python program to find uncommon words from two Strings
 # Python | Swap commas and dots in a String
 # Python | Permutation of a given string using inbuilt function
