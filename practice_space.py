@@ -353,15 +353,48 @@ else:
     print("Not a Binary String")
 
 
-# s24) Python | Find all close matches of input string from a list
+# 24) Python | Find all close matches of input string from a list
 from difflib import get_close_matches
 patterns = ['ape', 'apple', 'peach', 'puppy']
 word = 'apple'
 print(get_close_matches(word, patterns))
 
 
-# Python program to find uncommon words from two Strings
-# Python | Swap commas and dots in a String
+# 25) Python program to find uncommon words from two Strings
+s25 = "Geeks for Geeks"
+s_25 = "Learning from Geeks for Geeks"
+
+l25 = s25.split()[::1]
+l_25 = s_25.split()[::1]
+print(l_25)
+
+res25 = []
+
+common = set(l25).intersection(set(l_25))
+print(common)
+
+
+# for words in l25:
+#     if words not in common:
+#         res25.append(words)
+
+
+for words in l_25:
+    if words not in common:
+        res25.append(words)
+
+
+print(words)
+
+# 26) Python | Swap commas and dots in a String
+s26 = "14, 625, 498.002"
+
+res26 = s26.replace(',','@')
+res26 = res26.replace('.',',')
+res26 = res26.replace('@','.')
+print(res26)
+
+
 # Python | Permutation of a given string using inbuilt function
 # Python | Check for URL in a String
 # Execute a String of Code in Python
