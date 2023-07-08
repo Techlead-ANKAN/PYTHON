@@ -87,10 +87,10 @@ set7 = {"microsoft","google","apple"}
 # print(f"Clone of original set: {set1.copy()}")
 
 # 4.difference()	                                Returns a set containing the difference between two or more sets
-diff1 = set2.difference(set3)
-diff2 = set3.difference(set2)
-print(diff1)
-print(diff2)
+# diff1 = set2.difference(set3)
+# diff2 = set3.difference(set2)
+# print(diff1)
+# print(diff2)
 
 # 5.difference_update()	                        Removes the items in this set that are also included in another, specified set
 # set2.difference_update(set3)

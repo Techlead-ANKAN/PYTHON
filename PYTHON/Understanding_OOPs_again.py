@@ -1,8 +1,9 @@
 # class students:
 
-#     def __init__(self):
-#         self.name = "Ankan"
-#         self.age = 20
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         print("Init calling...")
 
 #     def update(self):
 #         self.name = "Piu"
@@ -16,8 +17,8 @@
 
 
     
-# s1 = students()
-# s2 = students()
+# s1 = students("Ankan", 20)
+# s2 = students("Shreya", 20)
 
 # s2.update()
 
@@ -49,32 +50,32 @@
 
 # print(cars.wheels)
 
-class students:
+# class students:
 
-    school = "SXI"
+#     school = "SXI"
 
-    def __init__(self,m1,m2,m3):
-        self.m1 = m1
-        self.m2 = m2
-        self.m3 = m3
+#     def __init__(self,m1,m2,m3):
+#         self.m1 = m1
+#         self.m2 = m2
+#         self.m3 = m3
     
-    def avg(self):
-        return (self.m1 + self.m2 + self.m3)/3
+#     def avg(self):
+#         return (self.m1 + self.m2 + self.m3)/3
     
-    def get(self):
-        return self.m1
+#     def get(self):
+#         return self.m1
     
-    def set(self):
-        self.m1 = 100
-        return f"Value changed"
+#     def set(self):
+#         self.m1 = 100
+#         return f"Value changed"
     
-    @classmethod
-    def change_school(cls):
-        cls.school = "Adamas"
+#     @classmethod
+#     def change_school(cls):
+#         cls.school = "Adamas"
 
-    @staticmethod
-    def add(x,y):
-        return (x+y)
+#     @staticmethod
+#     def add(x,y):
+#         return (x+y)
 
 
 
@@ -103,4 +104,32 @@ class students:
 
 
 
+
+class students:
+
+    def __init__(self, name):
+        self.name = name
+        self.details = self.details(20, "Kolkata", "B.Tech")
+        # self.info = self.details(19, "Kolkata", "B.Tech")
+        
+    def show(self):
+        print(f"Name = {self.name}")
+        return (self.details.show_details())
+    
+
+    class details:
+
+        def __init__(self, age, city, course):
+            self.age = age
+            self.city = city
+            self.course = course
+        
+        def show_details(self):
+            print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
+
+s_outer = students("Ankan Maity")
+
+# s1 = students.details()
+
+s_outer.show()
 

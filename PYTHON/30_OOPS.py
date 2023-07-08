@@ -1,5 +1,5 @@
 '''
-OOPs in PYTHON-->
+OOPs in PYTHON
 '''
 
 # # self -- keyword used to fetch the values
@@ -150,13 +150,15 @@ print(car2.mileage, car2.brand)
 
 
 # #      (ii) Class/static variables --> These are the variables that remain same even if the object changes
+
 class cars:
 
     wheels = 6     #--> class namespace # CLASS OR STATIC VARIABLES(define it outside the init)
-   
+
     def __init__(self):
         self.mileage = 15    # Instance namespace
         self.brand = "BMW"   # Instance namespace
+        
 
 car1 = cars()
 car2 = cars()
@@ -164,7 +166,7 @@ car2 = cars()
 car2.mileage = 9
 car2.brand = "Toyota"
 
-cars.wheels = 8   # Thsi is how you change a class or static variables
+cars.wheels = 8   # This is how you change a class or static variables
 
 print(car1.mileage, car1.brand, car1.wheels)
 print(car2.mileage, car2.brand, car2.wheels)
@@ -232,6 +234,10 @@ class students:
         self.mark3 = mark3
 
     # CLASS METHOD
+    @classmethod
+    def change_school(cls):
+        cls.school = "Adamas"
+
     @classmethod    # DECORATOR
     def school_name(cls):    # UsE of 'cls'
         return cls.school    
@@ -241,8 +247,8 @@ Piu = students(100,99,98)
 Shreya = students(99,100,98)
 
 
-students.school = "ADAMAS"   # This is how u change value of class variable
-
+# students.school = "ADAMAS"   # This is how u change value of class variable
+students.change_school()
 
 print(f"Ankan is from {Ankan.school_name()}")
 print(f"piu is from {Piu.school_name()}")
