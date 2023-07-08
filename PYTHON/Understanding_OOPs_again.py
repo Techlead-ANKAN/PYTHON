@@ -109,13 +109,12 @@ class students:
 
     def __init__(self, name):
         self.name = name
-        self.details = self.details(20, "Kolkata", "B.Tech")
+        self.s_inner = self.details(19, "Kolkata", "B.Tech")
         # self.info = self.details(19, "Kolkata", "B.Tech")
         
     def show(self):
         print(f"Name = {self.name}")
-        return (self.details.show_details())
-    
+        return (self.s_inner.show_details())
 
     class details:
 
@@ -128,8 +127,11 @@ class students:
             print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
 
 s_outer = students("Ankan Maity")
+s1_outer = students("Piu Paul")
 
-# s1 = students.details()
+s1_inner = students.details("20", "Kolkata", "B.Tech")
 
 s_outer.show()
+s1_outer.show()
+
 

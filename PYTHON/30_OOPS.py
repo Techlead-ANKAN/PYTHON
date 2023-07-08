@@ -294,11 +294,11 @@ class players:                     # OUTER CLASS
     def __init__(self,name,goals):
         self.name = name
         self.goals = goals
-        self.Nation = self.Nation()
+        self.N = self.Nation()
 
     def show(self):                # OUTER METHOD
         print(f"Player name- {self.name} and Goals scored- {self.goals}")   # This is what the method will do
-        return self.Nation.show()      # This is to call the show() method of the inner class    "self.inner_class_name.method()""
+        return self.N.show()      # This is to call the show() method of the inner class    "self.inner_class_name.method()""
 
     
     class Nation:                  # INNER CLASS
