@@ -129,9 +129,38 @@ class students:
 s_outer = students("Ankan Maity")
 s1_outer = students("Piu Paul")
 
-s1_inner = students.details("20", "Kolkata", "B.Tech")
+# s1_inner = students.details("20", "Kolkata", "B.Tech")
+
+s_outer.show()
+# s1_outer.show()
+
+
+
+
+
+
+class students:
+    def __init__(self, name, age, city, course):
+        self.name = name
+        self.s_inner = self.details(age, city, course)
+        
+    def show(self):
+        print(f"Name = {self.name}")
+        self.s_inner.show_details()
+
+    class details:
+        def __init__(self, age, city, course):
+            self.age = age
+            self.city = city
+            self.course = course
+        
+        def show_details(self):
+            print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
+
+s_outer = students("Ankan Maity", 19, "Kolkata", "B.Tech")
+s1_outer = students("Piu Paul", 20, "Kolkata", "B.Tech")
 
 s_outer.show()
 s1_outer.show()
 
-
+s_outer.s_inner.show_details()
