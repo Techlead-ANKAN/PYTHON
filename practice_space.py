@@ -360,31 +360,25 @@ word = 'apple'
 print(get_close_matches(word, patterns))
 
 
-# 25) Python program to find uncommon words from two Strings
+ # 25) Python program to find uncommon words from two Strings
 s25 = "Geeks for Geeks"
 s_25 = "Learning from Geeks for Geeks"
 
-l25 = s25.split()[::1]
-l_25 = s_25.split()[::1]
-print(l_25)
-
-res25 = []
-
-common = set(l25).intersection(set(l_25))
-print(common)
+l25 = set(s25.split()[::1])
+l_25 = set(s_25.split()[::1])
 
 
-# for words in l25:
-#     if words not in common:
-#         res25.append(words)
+res25 = set()
+
+if len(l25) > len(l_25):
+    res25 = (l25.difference(l_25))
+elif len(l_25) > len(l25):
+    res25 = (l_25.difference(l25))
+
+for ele in res25:
+    print(ele)
 
 
-for words in l_25:
-    if words not in common:
-        res25.append(words)
-
-
-print(words)
 
 # 26) Python | Swap commas and dots in a String
 s26 = "14, 625, 498.002"
@@ -395,14 +389,58 @@ res26 = res26.replace('@','.')
 print(res26)
 
 
-# Python | Permutation of a given string using inbuilt function
-# Python | Check for URL in a String
-# Execute a String of Code in Python
+# 27) Python | Permutation of a given string using inbuilt function
+from itertools import permutations
+
+s27 = "ABC"
+perm_list = list(permutations(s27))
+print(type(perm_list))
+
+for perms in perm_list:
+    print("".join(perms))
+
+# 28) Python | Check for URL in a String
+# 29) Execute a String of Code in Python
+code = '6+5'
+res29 = eval(code)
+print(res29) 
+
 
 # Advance String Programs
-# Python | Convert numeric words to numbers
-# Python | Word location in String
-# Python | Consecutive characters frequency
+
+# 30) Python | Convert numeric words to numbers
+dict = {"one": 1, "two": 2, "three" : 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "zero": 0}
+
+s30 = "zero four zero one"
+l30 = s30.split()[::1]
+res30 = ""
+
+for ele in l30:
+    res30 = res30 + str(dict.get(ele))
+   
+
+print(res30)
+
+
+# 31) Python | Word location(not index) in String
+s31 = "geeksforgeeks is best for geeks"
+word = "best"
+l31 = s31.split()[::1]
+
+for ele in l31:
+    if ele == word:
+        print(l31.index(word)+1)
+
+
+# 32) Python | Consecutive characters frequency
+s32 = "geekksforgggeeks"
+
+
+
+
+
+
+
 # String slicing in Python to rotate a string
 # String slicing in Python to check if a string can become empty by recursive deletion
 # Python Program to find minimum number of rotations to obtain actual string
