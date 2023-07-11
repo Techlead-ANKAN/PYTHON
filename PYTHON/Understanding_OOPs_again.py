@@ -204,6 +204,3 @@ outer1.inner2.inner_method() # calling the methd of inner class with the obj of 
 # Way 1 
 inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
 inner1.inner_method()  # calling the method of inner class
-
-
-

@@ -481,7 +481,7 @@ obj = B()
 
 
 # 10) super()-->
-# A- Super class, B - Super class, C - Sub class
+# A - Super class, B - Super class, C - Sub class
 
 class A:
     def __init__(self):
@@ -489,7 +489,6 @@ class A:
 
     def feature_1(self):
         print("feature 1-A")
-    
 
 class B:
     def __init__(self):
@@ -507,7 +506,7 @@ class C(A,B):
     def feature_3(self):
         print("Feature 3-C")
 
-# What will happen now? will it call for A or B or for both A and  B
+# What will happen now? will it call for A or B or for both A and B         
 obj = C()     
 
 
@@ -550,6 +549,7 @@ obj = C()
 
 # Types of Polymorphism - 1) DUCK TYPING, 2) OPERATOR OVERLOADING, 3) METHOD OVERLOADING, 4) METHOD OVERWRITTING
 
+
 # 11.1) DUCK TYPING---> "if a bird that walks like a duck, swims like a duck, quacks like a duck, flies like a duck, then it is a duck"
 
 class vscode:                 # Here the vscode is the DUCK
@@ -570,7 +570,7 @@ class MyEditor:
 class programs:
 
     def code(self,ide):      # Here the ide is teh BIRD
-        ide.execute()        # execute is a fucntion taht will execute the code in the selected ide
+        ide.execute()        # execute is a fucntion that will execute the code in the selected ide.
 
 ide = vscode()        # Declaring that the ide will be of myeditor type
                       # story_wise the bird is a duck
@@ -579,7 +579,8 @@ obj = programs()
 
 obj.code(ide)   # Now calling "code" method of class "programs" where the parameter is "ide" (THE BIRD) which is of type "vscode" (THE DUCK)
 
-# ** MAGIC METHODS--> __add__(), __sub__(), __mul__(),....  etc.
+
+# **MAGIC METHODS--> __add__(), __sub__(), __mul__(),....etc.
 a = 4
 b = 5
 str1 = "AN"
