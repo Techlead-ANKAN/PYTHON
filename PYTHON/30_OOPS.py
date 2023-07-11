@@ -287,7 +287,7 @@ print(f"Piu is from {Piu.school_name()}")
 students.info()   # Calling Static method*
 
 
-# 7) INNER CLASS Class inside a class -->
+# 7) INNER CLASS - Class inside a class -->
 
 class players:                     # OUTER CLASS
 
@@ -319,6 +319,37 @@ p1.show()
 p2.show()
 
 
+# Another example for further illustration
+class outer_class:  # outer class
+
+    def __init__(self, name):  # __init__ of outer class
+        self.name = name
+        self.inner2 = self.inner_class(name)  # creating the object of inner class (way 2) **
+
+
+    def outer_method(self):  # method of outer class
+        print(f"{self.name} is an object of outer class")
+
+
+    class inner_class:  # inner class
+
+        def __init__(self, name):  # __init__ of inner class
+            self.name = name
+
+        def inner_method(self):  # method of inner class
+            print(f"{self.name} is an object of inner class")
+
+
+outer1 = outer_class("Outer1")  # Creating object of outer class (with parameter)
+outer1.outer_method()  # calling the method of outer class 
+outer1.inner2.inner_method() # calling the methd of inner class with the obj of outer class
+
+# Way 1 
+inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
+inner1.inner_method()  # calling the method of inner class
+
+
+
 
 # 8) INHERITANCE
 #  i) Single
@@ -335,7 +366,7 @@ class A:
     def feature_2(self):
         print("Feature 2 working")
 
-class B(A):          # ---> SINGLE INHERITANCE
+class B(A):    # ---> SINGLE INHERITANCE [Syntax: <Inheriting_class> (<Inherited_class>)]
 
     def feature_3(self):
         print("Feature 3 working")
@@ -343,12 +374,16 @@ class B(A):          # ---> SINGLE INHERITANCE
     def feature_4(self):
         print("Feature 4 working")
 
-obj = B()
+obj = B() # creating object of B
+# obj1 = A()
+# Note : class A cannot acces the method of class B
 
-obj.feature_3()
-obj.feature_1()
-obj.feature_2()
-obj.feature_4()
+obj.feature_1() # method of A
+obj.feature_2() # method of A
+obj.feature_3() # method of B
+obj.feature_4() # method of B
+
+# obj1.feature_3() # AttributeError: 'A' object has no attribute 'feature_3'.
 
 
 # ii) Multi-Level Inheritance
@@ -442,7 +477,7 @@ class B(A):
         print("Feature B-2")
 
 obj = B()        
-# Will B call its init or A's ini---Yes it will call B's init, if B do not have its own init then it will go for init of super class
+# Will B call its init or A's init---Yes it will call B's init, if B do not have its own init then it will go for init of super class
 
 
 # 10) super()-->
@@ -472,7 +507,7 @@ class C(A,B):
     def feature_3(self):
         print("Feature 3-C")
 
-# What will happen now? will it call for A or B or for both A nad  B
+# What will happen now? will it call for A or B or for both A and  B
 obj = C()     
 
 

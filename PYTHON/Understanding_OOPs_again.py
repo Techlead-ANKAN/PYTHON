@@ -177,28 +177,33 @@ s_outer.s_inner.show_details()
 
 
 
-class outer_class:
+class outer_class:  # outer class
 
-    def __init__(self, name):
+    def __init__(self, name):  # __init__ of outer class
         self.name = name
-        self.inner1 = self.inner_class("Inner1")
+        self.inner2 = self.inner_class(name)  # creating the object of inner class (way 2) **
 
-    def outer_method(self):
+
+    def outer_method(self):  # method of outer class
         print(f"{self.name} is an object of outer class")
 
 
-    class inner_class:
+    class inner_class:  # inner class
 
-        def __init__(self, name):
+        def __init__(self, name):  # __init__ of inner class
             self.name = name
 
-        def inner_method(self):
+        def inner_method(self):  # method of inner class
             print(f"{self.name} is an object of inner class")
 
 
-outer1 = outer_class("Outer1")
-outer1.outer_method()
+outer1 = outer_class("Outer1")  # Creating object of outer class (with parameter)
+outer1.outer_method()  # calling the method of outer class 
+outer1.inner2.inner_method() # calling the methd of inner class with the obj of outer class
+
+# Way 1 
+inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
+inner1.inner_method()  # calling the method of inner class
 
 
-# inner1 = outer_class.inner_class("Inner1")
-inner1.inner_method()
+
