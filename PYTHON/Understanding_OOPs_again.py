@@ -164,3 +164,41 @@ s_outer.show()
 s1_outer.show()
 
 s_outer.s_inner.show_details()
+
+
+
+
+
+
+
+
+
+
+
+
+
+class outer_class:
+
+    def __init__(self, name):
+        self.name = name
+        self.inner1 = self.inner_class("Inner1")
+
+    def outer_method(self):
+        print(f"{self.name} is an object of outer class")
+
+
+    class inner_class:
+
+        def __init__(self, name):
+            self.name = name
+
+        def inner_method(self):
+            print(f"{self.name} is an object of inner class")
+
+
+outer1 = outer_class("Outer1")
+outer1.outer_method()
+
+
+# inner1 = outer_class.inner_class("Inner1")
+inner1.inner_method()
