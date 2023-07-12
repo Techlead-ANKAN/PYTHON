@@ -434,14 +434,35 @@ for ele in l31:
 
 # 32) Python | Consecutive characters frequency
 s32 = "geekksforgggeeks"
+count = 1
+no = []
+char = []
+res32 = {}
+for i in range(0,(len(s32)-1)):
+    if (s32[i] == s32[i+1]):
+        count += 1
+    else:
+        char.append(s32[i])
+        no.append(count)
+        count = 1
+
+print(no)
+print(char)  # Main program complete
+
+
+for i in range(0, len(char)-1):
+    print(f" {char[i]} --> {no[i]}")
 
 
 
 
+# 33) String slicing in Python to rotate a string
+s33 = "GeeksforGeeks"
+n = 2
 
+print(f"Left rotation: {s33[2:] + s33[0:2]}")
+print(f"Right rotation: {s33[-2:] + s33[0:-2]}")
 
-
-# String slicing in Python to rotate a string
 # String slicing in Python to check if a string can become empty by recursive deletion
 # Python Program to find minimum number of rotations to obtain actual string
 # Python – Words Frequency in String Shorthands
