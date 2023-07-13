@@ -460,15 +460,82 @@ for i in range(0, len(char)-1):
 s33 = "GeeksforGeeks"
 n = 2
 
-print(f"Left rotation: {s33[2:] + s33[0:2]}")
+print(f"Left rotation: {s33[2:] + s33[0:2]}") 
 print(f"Right rotation: {s33[-2:] + s33[0:-2]}")
 
-# String slicing in Python to check if a string can become empty by recursive deletion
-# Python Program to find minimum number of rotations to obtain actual string
-# Python – Words Frequency in String Shorthands
-# Python – Successive Characters Frequency
-# Python – Sort String list by K character frequency
-# Python – Convert Snake case to Pascal case
+# 34) String slicing in Python to check if a string can become empty by recursive deletion
+s34 = "GeeksforGeeks"
+s34 = s34.lower()
+word = "geeks"
+
+if s34.find(word):
+    s34.replace(word, "")
+
+print(s34)
+
+# 35) Python Program to find minimum number of rotations to obtain actual string
+
+# 36) Python – Words Frequency in String Shorthands
+
+s36 = "Gfg is is best"
+l36 = s36.split()[::1]
+dup36 = []
+unq36 = []
+
+counter = 0
+for words in l36:
+    if words not in dup36:
+        dup36.append(words)
+        unq36.append(words)
+
+
+for words in unq36:
+    print(f"{words} --> {l36.count(words)}")
+
+
+# 37) Python – Successive Characters Frequency
+s37 = "geeks are for geeksforgeeks"
+word37 = "geek"
+wrd_len = len(word37)
+count = 0
+a = s37.index(word37)
+letter = a + wrd_len
+
+for i in range(letter, len(s37)):
+    if s37[i] == "s":
+        count += 1
+
+print(count)
+
+
+# 38) Python – Sort String list by K character frequency
+s38 = ["geekforgeekss", "is", "bessst", "for", "geeks"]
+k = "s"
+no = []
+res38 = {}
+sorted_res38 = {}
+max = 0
+for words in s38:
+    count = 0
+    if k in words:
+        for char in words:
+            if char == k:
+                count += 1
+        no.append(count)
+    else:
+        no.append(0)
+
+for i in range (len(no)):
+    res38.update({no[i]:s38[i]})
+
+l38 = list(res38.keys())
+l38.sort()
+l38.reverse()
+print(l38)
+sorted_res38 = {i:res38[i] for i in l38}
+print(sorted_res38)
+
+# 39) Python – Convert Snake case to Pascal case
 # Python – Avoid Last occurrence of delimitter
 # Python program to find the character position of Kth word from a list of strings
 # Python – Right and Left Shift characters in String
