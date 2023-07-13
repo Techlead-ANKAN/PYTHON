@@ -510,30 +510,43 @@ print(count)
 
 # 38) Python – Sort String list by K character frequency
 s38 = ["geekforgeekss", "is", "bessst", "for", "geeks"]
-k = "s"
+k = 's'
 no = []
-res38 = {}
-sorted_res38 = {}
-max = 0
+final = []
 for words in s38:
     count = 0
     if k in words:
-        for char in words:
-            if char == k:
+        for i in range(len(words)):
+            if words[i] == k:
                 count += 1
         no.append(count)
     else:
         no.append(0)
 
-for i in range (len(no)):
-    res38.update({no[i]:s38[i]})
 
-l38 = list(res38.keys())
-l38.sort()
-l38.reverse()
-print(l38)
-sorted_res38 = {i:res38[i] for i in l38}
-print(sorted_res38)
+largest = max(no)
+
+for i in range(0,len(no)-1):
+    if no[i] == largest:
+        a = no.pop(i)
+        # print(largest)
+        print(no)
+        print(s38[i])
+    largest = max(no)
+    
+
+
+print(no)
+
+
+
+        
+
+
+        
+
+
+
 
 # 39) Python – Convert Snake case to Pascal case
 # Python – Avoid Last occurrence of delimitter
