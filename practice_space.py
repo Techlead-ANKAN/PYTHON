@@ -535,24 +535,75 @@ for i in range(0,len(no)-1):
     largest = max(no)
     
 
-
 print(no)
-
-
-
-        
-
-
-        
 
 
 
 
 # 39) Python – Convert Snake case to Pascal case
-# Python – Avoid Last occurrence of delimitter
-# Python program to find the character position of Kth word from a list of strings
-# Python – Right and Left Shift characters in String
-# Python | Exceptional Split in String
+s39 = "I_am_a_good_boy" #S nake case
+l39 = s39.split('_')[::1]
+res39 = []
+print(l39)
+
+for word in l39:
+    res39.append(word.capitalize())
+
+Pascal_case = " ".join(res39)
+
+print(Pascal_case)
+
+
+# 40) Python – Avoid Last occurrence of delimitter
+l40 = [4, 7, 8, 3, 2, 1, 9]
+res40 = []
+for i in l40:
+    res40.append(str(i))
+
+    
+delim = "*"
+s40 = delim.join(res40)
+print(s40)
+
+
+# 41) Python program to find the character position of Kth word from a list of strings
+l41 = ["geekforgeeks", "is", "best", "for", "geeks"]
+k = 21
+s41 = ""
+for i in l41:
+    s41 += i
+char = s41[k]
+
+print(s41.find(char))
+
+
+
+# 42) Python – Right and Left Shift characters in String
+
+# 43) Python | Exceptional Split in String
+s43 = "gfg, is, (best, for), geeks"
+l43 = []
+temp43 = ""
+for char in s43:
+    if char == '(':
+        if char != ')':
+            temp43 += char
+        elif char == ')':
+            l43.append(temp43)
+            temp43 = ""
+
+    elif char != '(':
+        if char != ',':
+            temp43 += char
+        elif char == ',':
+            l43.append(temp43)
+            temp43 = ""        
+
+print(l43)
+
+
+
+
 # Python – Split String on vowels
 # Python – Mirror Image of String
 # Python – Replace multiple words with K
