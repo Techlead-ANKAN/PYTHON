@@ -204,3 +204,29 @@ outer1.inner2.inner_method() # calling the methd of inner class with the obj of 
 # Way 1 
 inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
 inner1.inner_method()  # calling the method of inner class
+
+
+
+
+
+
+
+
+class students:
+
+    def __init__(self, marks):
+        self.marks = marks
+
+    def __truediv__(self, another):
+        # return self.marks / another.marks
+        return "Definig what the function will do"
+    
+    def __add__(self, another):
+        # return self.marks + another.marks
+        return "Definig what the function will do"
+
+s1 = students(100)
+s2 = students(50)
+
+print(s1 / s2)
+print(s1 + s2)

@@ -569,10 +569,10 @@ class MyEditor:
 
 class programs:
 
-    def code(self,ide):      # Here the ide is teh BIRD
+    def code(self,ide):      # Here the ide is the BIRD
         ide.execute()        # execute is a fucntion that will execute the code in the selected ide.
 
-ide = vscode()        # Declaring that the ide will be of myeditor type
+ide = MyEditor()        # Declaring that the ide will be of myeditor type
                       # story_wise the bird is a duck
 
 obj = programs()
@@ -630,3 +630,26 @@ if s1>s2:
     print("S1 Wins")
 else:
     print("S2 Wins")
+
+
+# Another example: -
+class students:
+
+    def __init__(self, marks):
+        self.marks = marks
+
+    def __truediv__(self, another):
+        # return self.marks / another.marks
+        return "Definig what the function will do"
+    
+    def __add__(self, another):
+        # return self.marks + another.marks
+        return "Definig what the function will do"
+
+s1 = students(100)
+s2 = students(50)
+
+print(s1 / s2)
+print(s1 + s2)
+
+# Mapping Operators to functions: - [ Link:  https://docs.python.org/3/library/operator.html#:~:text=Mapping%20Operators%20to,gt(a%2C%20b) ]
