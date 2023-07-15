@@ -604,9 +604,58 @@ print(l43)
 
 
 
-# Python – Split String on vowels
-# Python – Mirror Image of String
-# Python – Replace multiple words with K
+# 44) Python – Split String on vowels
+s44 = "Iamagoodboy"
+vowels = ['a','e','i','o','u','A','E','I','O','U']
+temp44 = ""
+l44 = []
+
+for char in s44:
+    print(char)
+    if char not in vowels:
+        temp44 += char
+    elif char in vowels:
+        if temp44 != "":
+            l44.append(temp44)
+        temp44 = ""
+    
+
+print(l44)
+        
+
+
+
+# 45) Python – Mirror Image of String
+s45 = "boid"
+mirror_dict = {'b':'d', 'd':'b', 'i':'i', 'o':'o', 'v':'v', 'w':'w', 'x':'x'}
+res45 = ""
+for char in s45:
+    if char not in mirror_dict.keys():
+        break
+    elif char in mirror_dict.keys():
+        res45 += mirror_dict[char]
+
+print(res45)
+
+
+# 46) Python – Replace multiple words with K
+s46 = 'Geeksforgeeks is best for geeks and CS'
+l46 = s46.split()[::1]
+print(l46)
+word_list = ["best", 'CS', 'for']
+rep_word = "gfg"
+res46 = []
+
+for words in l46:
+    if words not in word_list:
+        res46.append(words)
+    
+    elif words in word_list:
+        res46.append(rep_word)
+
+print(res46)
+
+
 # Python – Replace Different characters in String at Once
 # Python | Multiple indices Replace in String
 # Python – Ways to remove multiple empty spaces from string List
@@ -632,7 +681,7 @@ print(l43)
 # Python – Possible Substring count from String
 # Python – Replace all occurrences of a substring in a string
 # Python – Longest Substring Length of K
-# Python – Extract Indices of substring matches
+# Python – Extract Indices of substring matches9
 # Python | Split by repeating substring
 # Python | Remove substring list from String
 # Python – Remove after substring in String
