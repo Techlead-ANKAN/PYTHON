@@ -15,8 +15,8 @@ Practice Set- 10
 #         print(f"{self.name} works at Microsoft, whose age is {self.age} and designation is {self.designation}")
 
 # e1 = programmer("Ankan Maity", 24, "Software Developer")
-# e2 = programmer("Rumana Khatun", 24, "Software Developer")
-# e3 = programmer("Koustav Dutta", 24, "Software Enginner")
+# e2 = programmer("Piu Paul", 24, "Software Developer")
+# e3 = programmer("Harry", 24, "Software Enginner")
 
 # e1.about()
 # e2.about()
@@ -47,7 +47,7 @@ Practice Set- 10
 #     a = "Ankan"
 
 # obj = sample()
-# obj.a = "Rumana"
+# obj.a = "Piu"
 
 # print(obj.a)
 

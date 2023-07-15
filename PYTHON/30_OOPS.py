@@ -605,6 +605,7 @@ class student:
 
         res = student(m1,m2)
         return res
+        
 
     def __gt__(self,others):
         r1 = self.m1 + self.m2
@@ -621,10 +622,11 @@ s3 = student(5,8)
      # (PHYSICS,MATHS) MARKS (let)
 
 
-res = s1+s3       # THIS IS THE FUNC NAME res THAT WILL DO THE WORK AS PER WE DO THE WORKS IN __add__ method
+s4 = s1+s2       # THIS IS THE FUNC NAME res THAT WILL DO THE WORK AS PER WE DO THE WORKS IN __add__ method
+print(s4)
+print(s4.m1)
+print(s4.m2)
 
-print(res.m1)  # SUM OF PHYSICS MARKS OF 3 STUDENTS 
-print(res.m2)  # SUM OF MATHS MARKS OF 3 STUDENTS
 
 if s1>s2:
     print("S1 Wins")
@@ -640,7 +642,7 @@ class students:
 
     def __truediv__(self, another):
         # return self.marks / another.marks
-        return "Definig what the function will do"
+        return "Defining what the function will do"
     
     def __add__(self, another):
         # return self.marks + another.marks
@@ -653,3 +655,10 @@ print(s1 / s2)
 print(s1 + s2)
 
 # Mapping Operators to functions: - [ Link:  https://docs.python.org/3/library/operator.html#:~:text=Mapping%20Operators%20to,gt(a%2C%20b) ]
+
+
+
+
+# 11.3) Method Overloading
+
+
