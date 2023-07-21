@@ -661,18 +661,35 @@ print(s1 + s2)
 
 # 11.3) Method Overloading
 
-
+# Way 1: Only the latest defined method will be active / considered / will work
 def add(a,b):
     return (a + b)
 
 def add(a,b,c):
     return (a + b + c)
-    
 
-        
+
+print(add(1,2,3))
+
+# way 2: Method Overloading using None keyword.
+
+def add (a = None, b = None, c = None):
+    
+    if (a != None) and (b != None) and (c != None):
+        return (a+b+c)
+    
+    elif (a != None) and (b != None):
+        return (a+b)
+    
+    else:
+        return (a)
+
+print(add(1,2,3))
 print(add(1,2))
-    
+print(add(1))
 
+
+    
 # 11.4) Method Overriding  (pre-requisite - Inheritance)
 
 class A:        # Parent Class
@@ -706,3 +723,5 @@ obj.show()    # It will call the "show()" method of class A
 obj1.show()   #  Result - "In class B"
 
 # **** Applicable for all other types of Inheritance
+
+
