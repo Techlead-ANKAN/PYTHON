@@ -662,3 +662,47 @@ print(s1 + s2)
 # 11.3) Method Overloading
 
 
+def add(a,b):
+    return (a + b)
+
+def add(a,b,c):
+    return (a + b + c)
+    
+
+        
+print(add(1,2))
+    
+
+# 11.4) Method Overriding  (pre-requisite - Inheritance)
+
+class A:        # Parent Class
+
+    def show(self):    # Parent Class method
+        print("In class A")
+
+class B(A):     # Child Class
+# Now class B has gets the "show()" method of class A; here comes Method Overriding, here Class B will override class A's "show()" method with its own "show()" method 
+
+    def show(self):    # Child class method
+        print("In Class B")
+
+obj = A()   # Object of Parent class
+obj1 = B()  # Object of Child Class
+
+obj.show()    # It will call the "show()" method of class A
+
+# Note: -
+# 1) Both the classes have same method (maybe there work is different but the name is same)
+# 2) Class B inherits class A
+# 3) but now class B will override the "show()" of class A with its own "show()" method
+# 4) class b will look kind of like this after inheriting class A
+# Class B:
+#   def show(self):
+#       print("In Class B") 
+#   
+#   def show(self):
+#       print("In Class B")
+
+obj1.show()   #  Result - "In class B"
+
+# **** Applicable for all other types of Inheritance
