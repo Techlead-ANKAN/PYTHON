@@ -298,7 +298,7 @@ class players:                     # OUTER CLASS
 
     def show(self):                # OUTER METHOD
         print(f"Player name- {self.name} and Goals scored- {self.goals}")   # This is what the method will do
-        return self.N.show()      # This is to call the show() method of the inner class    "self.inner_class_name.method()""
+        return self.N.show()      # This is to call the show() method of the inner class    "self.inner_class_object_name.method()""
 
     
     class Nation:                  # INNER CLASS
@@ -342,7 +342,8 @@ class outer_class:  # outer class
 
 outer1 = outer_class("Outer1")  # Creating object of outer class (with parameter)
 outer1.outer_method()  # calling the method of outer class 
-outer1.inner2.inner_method() # calling the methd of inner class with the obj of outer class
+
+outer1.inner2.inner_method() # ** calling the method of inner class with the obj of outer class
 
 # Way 1 
 inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
@@ -507,7 +508,7 @@ class C(A,B):
         print("Feature 3-C")
 
 # What will happen now? will it call for A or B or for both A and B         
-obj = C()     
+obj = C()    # It will call class A's init first then its own init (if any) 
 
 
 # METHOD RESOLUTION ORDER(MRO)--> LEFT TO RIGHT
@@ -570,14 +571,14 @@ class MyEditor:
 class programs:
 
     def code(self,ide):      # Here the ide is the BIRD
-        ide.execute()        # execute is a fucntion that will execute the code in the selected ide.
+        ide.execute()        # execute is a fucntion that will run the code in the selected ide.
 
 ide = MyEditor()        # Declaring that the ide will be of myeditor type
                       # story_wise the bird is a duck
 
 obj = programs()
 
-obj.code(ide)   # Now calling "code" method of class "programs" where the parameter is "ide" (THE BIRD) which is of type "vscode" (THE DUCK)
+obj.code(ide)   # Now calling "code" method of class "programs" where the parameter is "ide" (THE BIRD) which is of type "MyEditor" (THE DUCK)
 
 
 # **MAGIC METHODS--> __add__(), __sub__(), __mul__(),....etc.
@@ -587,9 +588,18 @@ str1 = "AN"
 str2 = "KAN"
 print(a+b) # u call this
 print(int.__add__(a,b))  # this is what happens behind the scenes
+
 print(str1 + str2)
 print(str.__add__(str1,str2))
 
+print(b-a)
+print(int.__sub__(b,a))
+
+print(a*b)
+print(int.__mul__(a,b))
+
+print(b/a)
+print(int.__truediv__(b,a))
 
 
 # 11.2) OPERATOR OVERLOADING-->
@@ -668,10 +678,10 @@ def add(a,b):
 def add(a,b,c):
     return (a + b + c)
 
-
+print(add(1,2))   # Error: - 2 out of 3 positional arguements are given   AS the newly defined function requires 3 arguements
 print(add(1,2,3))
 
-# way 2: Method Overloading using None keyword.
+# way 2: Method Overloading using "None" keyword.
 
 def add (a = None, b = None, c = None):
     

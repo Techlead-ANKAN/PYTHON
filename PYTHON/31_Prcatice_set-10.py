@@ -4,23 +4,57 @@ Practice Set- 10
 
 # 1) Create a class programmer to store information of few programmers working at Microsoft
 
-# class programmer:
+# way 1
+class programmer:
 
-#     def __init__(self,name,age,designation):
-#         self.name = name
-#         self.age = age
-#         self.designation = designation
+    def __init__(self,name,age,designation):
+        self.name = name
+        self.age = age
+        self.designation = designation
 
-#     def about(self):
-#         print(f"{self.name} works at Microsoft, whose age is {self.age} and designation is {self.designation}")
+    def about(self):
+        print(f"{self.name} works at Microsoft, whose age is {self.age} and designation is {self.designation}")
 
-# e1 = programmer("Ankan Maity", 24, "Software Developer")
-# e2 = programmer("Piu Paul", 24, "Software Developer")
-# e3 = programmer("Harry", 24, "Software Enginner")
+e1 = programmer("Ankan Maity", 24, "Software Developer")
+e2 = programmer("Piu Paul", 24, "Software Developer")
+e3 = programmer("Harry", 24, "Software Enginner")
 
-# e1.about()
-# e2.about()
-# e3.about()
+e1.about()
+e2.about()
+e3.about()
+
+# way 2
+class programmer :
+    
+    def __init__(self, name, age, city, phone_no, gender):
+        self.name = name
+        self.pd = self.programmer_details(age, city, phone_no, gender)
+        
+        
+    def show(self):
+        print(f"Name - {self.name}")
+        self.pd.details()
+        
+        
+    
+    class programmer_details:
+
+        def __init__(self,age, city, phone_no, gender):
+            self.age = age
+            self.city = city
+            self.phone_no = phone_no
+            self.gender = gender
+
+
+        def details(self):
+            print(f"Age - {self.age}\nCity - {self.city}\nPhone No. - {self.phone_no}\nGender - {self.gender}\n\n")
+
+
+E1 = programmer("Ankan Maity", 24, "Kolkata", 8617790081, "Male")
+E2 = programmer("Piu", 23, "Kolkata", 7029488160, "Female")
+
+E1.show()
+E2.show()
 
 
 
@@ -76,11 +110,11 @@ Practice Set- 10
 
 
 
-# 5) Write a class Train which has methods to book a ticket, get status (no.of seats) 
-# and get fare information of trains running under Indian Railways
+# 5) Write a class Train which has methods to book a ticket, get status (no.of seats) and get fare information of trains running under Indian Railways.
+
 
 # class Train:
-    
+        
 #     seats = 125
 #     filled = 85
 #     fare = "255/-"

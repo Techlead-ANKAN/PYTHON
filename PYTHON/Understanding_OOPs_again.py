@@ -105,65 +105,65 @@
 
 
 
-class students:
+# class students:
 
-    def __init__(self, name):
-        self.name = name
-        self.s_inner = self.details(19, "Kolkata", "B.Tech")
-        # self.info = self.details(19, "Kolkata", "B.Tech")
+#     def __init__(self, name):
+#         self.name = name
+#         self.s_inner = self.details(19, "Kolkata", "B.Tech")
+#         # self.info = self.details(19, "Kolkata", "B.Tech")
         
-    def show(self):
-        print(f"Name = {self.name}")
-        return (self.s_inner.show_details())
+#     def show(self):
+#         print(f"Name = {self.name}")
+#         return (self.s_inner.show_details())
 
-    class details:
+#     class details:
 
-        def __init__(self, age, city, course):
-            self.age = age
-            self.city = city
-            self.course = course
+#         def __init__(self, age, city, course):
+#             self.age = age
+#             self.city = city
+#             self.course = course
         
-        def show_details(self):
-            print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
+#         def show_details(self):
+#             print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
 
-s_outer = students("Ankan Maity")
-s1_outer = students("Piu Paul")
+# s_outer = students("Ankan Maity")
+# s1_outer = students("Piu Paul")
 
-# s1_inner = students.details("20", "Kolkata", "B.Tech")
+# # s1_inner = students.details("20", "Kolkata", "B.Tech")
 
-s_outer.show()
+# s_outer.show()
+# # s1_outer.show()
+
+
+
+
+
+
+# class students:
+#     def __init__(self, name, age, city, course):
+#         self.name = name
+#         self.s_inner = self.details(age, city, course)
+        
+#     def show(self):
+#         print(f"Name = {self.name}")
+#         self.s_inner.show_details()
+
+#     class details:
+#         def __init__(self, age, city, course):
+#             self.age = age
+#             self.city = city
+#             self.course = course
+        
+#         def show_details(self):
+#             print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
+
+# s_outer = students("Ankan Maity", 19, "Kolkata", "B.Tech")
+# s1_outer = students("Piu Paul", 20, "Kolkata", "B.Tech")
+
+# s_outer.show()
 # s1_outer.show()
 
-
-
-
-
-
-class students:
-    def __init__(self, name, age, city, course):
-        self.name = name
-        self.s_inner = self.details(age, city, course)
-        
-    def show(self):
-        print(f"Name = {self.name}")
-        self.s_inner.show_details()
-
-    class details:
-        def __init__(self, age, city, course):
-            self.age = age
-            self.city = city
-            self.course = course
-        
-        def show_details(self):
-            print(f"Age = {self.age}, City = {self.city}, Course = {self.course}")
-
-s_outer = students("Ankan Maity", 19, "Kolkata", "B.Tech")
-s1_outer = students("Piu Paul", 20, "Kolkata", "B.Tech")
-
-s_outer.show()
-s1_outer.show()
-
-s_outer.s_inner.show_details()
+# s_outer.s_inner.show_details()
 
 
 
@@ -177,56 +177,101 @@ s_outer.s_inner.show_details()
 
 
 
-class outer_class:  # outer class
+# class outer_class:  # outer class
 
-    def __init__(self, name):  # __init__ of outer class
-        self.name = name
-        self.inner2 = self.inner_class(name)  # creating the object of inner class (way 2) **
-
-
-    def outer_method(self):  # method of outer class
-        print(f"{self.name} is an object of outer class")
+#     def __init__(self, name):  # __init__ of outer class
+#         self.name = name
+#         self.inner2 = self.inner_class(name)  # creating the object of inner class (way 2) **
 
 
-    class inner_class:  # inner class
-
-        def __init__(self, name):  # __init__ of inner class
-            self.name = name
-
-        def inner_method(self):  # method of inner class
-            print(f"{self.name} is an object of inner class")
+#     def outer_method(self):  # method of outer class
+#         print(f"{self.name} is an object of outer class")
 
 
-outer1 = outer_class("Outer1")  # Creating object of outer class (with parameter)
-outer1.outer_method()  # calling the method of outer class 
-outer1.inner2.inner_method() # calling the methd of inner class with the obj of outer class
+#     class inner_class:  # inner class
 
-# Way 1 
-inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
-inner1.inner_method()  # calling the method of inner class
+#         def __init__(self, name):  # __init__ of inner class
+#             self.name = name
+
+#         def inner_method(self):  # method of inner class
+#             print(f"{self.name} is an object of inner class")
 
 
+# outer1 = outer_class("Outer1")  # Creating object of outer class (with parameter)
+# outer1.outer_method()  # calling the method of outer class 
+# outer1.inner2.inner_method() # calling the methd of inner class with the obj of outer class
+
+# # Way 1 
+# inner1 = outer_class.inner_class("Inner1")  # Creating the object of inner class [ Syntax: obj of inner class = name of outer class.name of inner class(parameter)]
+# inner1.inner_method()  # calling the method of inner class
 
 
 
 
 
 
-class students:
 
-    def __init__(self, marks):
-        self.marks = marks
 
-    def __truediv__(self, another):
-        # return self.marks / another.marks
-        return "Definig what the function will do"
+# class students:
+
+#     def __init__(self, marks):
+#         self.marks = marks
+
+#     def __truediv__(self, another):
+#         # return self.marks / another.marks
+#         return "Definig what the function will do"
     
-    def __add__(self, another):
-        # return self.marks + another.marks
-        return "Definig what the function will do"
+#     def __add__(self, another):
+#         # return self.marks + another.marks
+#         return "Definig what the function will do"
 
-s1 = students(100)
-s2 = students(50)
+# s1 = students(100)
+# s2 = students(50)
 
-print(s1 / s2)
-print(s1 + s2) 
+# print(s1 / s2)
+# print(s1 + s2) 
+
+
+
+
+class Train:
+    
+    def __init__(self):
+    
+        self.name = input("Enter your name: ")
+        self.age = int(input("Enter your age: "))
+        self.gender = input("Enter your gender: ")
+        self.starting_loc = input("Enter starting station: ")
+        self.dest_loc = input("Enter destination station: ")
+        
+
+    def check_trains(self):
+        
+        trains_list = ["sealdah to belgharia",
+                       "sealdah to naihati",
+                       "naihati to belgharia",
+                       "sealdah to belgharia",
+                       "dumdum to barrackpore" ]
+        counter = 0
+
+        for i in trains_list:
+            if (self.starting_loc.lower() in i) and (self.dest_loc.lower() in i):
+                counter += 1
+            
+
+        
+        if counter != 0:
+            print(f"No.of trains from {self.starting_loc} to {self.dest_loc} --> {counter}.")
+        else:
+            print(f"No.of trains from {self.starting_loc} to {self.dest_loc} --> {counter}.")
+
+
+
+            
+
+P1 = Train()
+
+P1.check_trains()
+            
+                
+        
