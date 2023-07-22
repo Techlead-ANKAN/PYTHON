@@ -233,9 +233,12 @@
 
 
 
+import random
 
 class Train:
     
+
+
     def __init__(self):
     
         self.name = input("Enter your name: ")
@@ -245,7 +248,7 @@ class Train:
         self.dest_loc = input("Enter destination station: ")
         
 
-    def check_trains(self):
+    def book_tickets(self):
         
         trains_list = ["sealdah to belgharia",
                        "sealdah to naihati",
@@ -258,20 +261,31 @@ class Train:
             if (self.starting_loc.lower() in i) and (self.dest_loc.lower() in i):
                 counter += 1
             
+        seats = 500
+        filled = 451
 
         
         if counter != 0:
-            print(f"No.of trains from {self.starting_loc} to {self.dest_loc} --> {counter}.")
+            print(f"There are trains available for your route.")
+
+            if filled < seats:
+                filled += 1
+                seat_no = random.randrange(filled, seats)
+                print(f"Seat no. - {seat_no} is booked for {self.name}")
+
+
         else:
-            print(f"No.of trains from {self.starting_loc} to {self.dest_loc} --> {counter}.")
+            print(f"There are no trains availablle for your route.")
+            print("No seats left.")
 
 
+temp = 1
+while(temp != 0):
+    P1 = Train()
+    P1.book_tickets()
+    print("\nThank you\n")
 
-            
-
-P1 = Train()
-
-P1.check_trains()
-            
+# P2 = Train()
+# P2.book_tickets()
                 
         
