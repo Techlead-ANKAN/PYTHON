@@ -4,11 +4,11 @@
 # Suppose you want to build a program where you want to calculate the total salary based on the base salary and salary bonus
 
 
-
 class employee:
 
-    salary = 70000
-    salary_bonus = 1000
+    E_name = input("Enter name: ")
+    salary = int(input("Enter base salary: "))
+    salary_bonus = 2000
 
     # Now suppose I want to calculate the total salary on the basis of salary bonus and salary
 
