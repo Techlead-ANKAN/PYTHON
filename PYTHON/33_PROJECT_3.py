@@ -9,8 +9,8 @@ class library:
 
     def __init__(self):
         self.books = ["Algorithm", "Django", "Python", "Java", "C++", "Php", "Node.Js", "HTML"]
-        self.dup = ["Algorithm", "Django", "Python", "Java", "C++", "Php", "Node.Js", "HTML"]  # DUPLICATE
-        self.b = ["algorithm", "django", "python", "java", "c++", "php", "node.js", "html"]   # lower
+        self.dup = ["Algorithm", "Django", "Python", "Java", "C++", "Php", "Node.Js", "HTML"]  
+        self.b = ["algorithm", "django", "python", "java", "c++", "php", "node.js", "html"]   
 
 
     def show_books(self):
@@ -49,11 +49,8 @@ class student(library):
                 break
 
 
-
-
-
 S1 = student()
-# print(S1.show_books())
+
 
 while (True):
     print("========== Enter any choice ==========")
