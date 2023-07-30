@@ -6,8 +6,10 @@ symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
 num = ['0','1','2','3','4','5', '6', '7', '8', '9']
 len = random.randint(8, 17)
 password = ""
+
 for i in range(0, len):
     password += random.choice(keys)
+
 count = 0
 if password.isalnum():
     for char in password:
@@ -15,13 +17,11 @@ if password.isalnum():
             count += 1
         
 
-any_no = random.choice(0,10)
 
 if count == 0:
-    password.replace(password[2], any_no)
+    password.replace(password[2], str(random.randint(0, 10)))
 else:
     pass
-
 
     
 print(f"Password: {password} of length: {len}")
