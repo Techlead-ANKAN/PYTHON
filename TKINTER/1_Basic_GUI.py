@@ -36,6 +36,7 @@
 
 from tkinter import *     # Importing all the modules fromm the Tkinter library
 
+
 root = Tk()   # An instance, named "root" of class Tk() has been created. 
               # It basically creates the basic GUI(including the basic components of gui that are present in every gui, thus creating a base GUI for you). 
 
