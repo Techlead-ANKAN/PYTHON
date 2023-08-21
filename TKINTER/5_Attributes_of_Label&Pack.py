@@ -27,9 +27,10 @@ root.title("Ankan's GUI")   # sets the title of the GUI
 # 15) justify -- it is used to define how to align multiple lines of text. Use LEFT, RIGHT and CENTER as its values.
 # *16) relief -- It sets a specific border. SUNKEN, RAISED, GROOVE, RIDGE
 # 17) underline -- you can display an underline below the nth character, counting form 0, by setting this option to n. the default is underline = -1, which means no underlining.
+# 18) wraplength -- Instead of having only one line as the label text it can be broken into to the number of lines where each line has the number of characters specified to this option.
 
 # Syntax: - Label(options....)
-lb = Label(text = "Ankan is a good boy.", bg = "cyan", fg = "black", padx = 100, pady = 100, font = "arial 20 bold", borderwidth = 5, relief = SUNKEN)
+lb = Label(text = "Ankan is a good boy.", bg = "white", fg = "black", padx = 100, pady = 100, font = "arial 20 bold", borderwidth = 5, relief = RIDGE)
 
 # Attributes of Pack: -
 
