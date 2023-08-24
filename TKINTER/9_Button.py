@@ -32,11 +32,14 @@ root.geometry("1920x1080")
 f1 = Frame(root)
 f1.pack()
 
-def greet():
+def greet():   #  creating the function that the command will call
     print("Hello nice to meet you!!!")
 
-b1 = Button(f1, text = "Click Me!!!\nNOW", activebackground = "white", activeforeground = "black", bg = "grey", fg = "white", bd = 3, command = greet, height = 2, width = 9, justify = CENTER, padx = 100, pady = 100, relief = RIDGE, underline = 0)
-b1.pack(side = LEFT)
+# Creating the button
+b1 = Button(f1, text = "Click Me!!!\nNOW", activebackground = "white", activeforeground = "black", bg = "grey", fg = "white", bd = 3, command = greet, height = 20, width = 9, justify = CENTER, padx = 100, pady = 100, relief = RIDGE)
+
+
+b1.pack(side = LEFT)  # packing the button accordingly
 
 
 root.mainloop()
