@@ -25,13 +25,13 @@ def f3():
 def f4():
     print("I am an Orange button.")
 
-b1 = Button(frame, text = "Click Me", fg = "red", bg = "white", activebackground = "red", activeforeground = "white", height = 3,  width = 7, command = f1)
+b1 = Button(frame, text = "Click Me", fg = "red", bg = "white", activebackground = "red", activeforeground = "white", height = 3, width = 7, command = f1)
 b1.pack(side = LEFT, padx = 10, pady = 10)
 
-b2 = Button(frame, text = "Click Me", fg = "blue", bg = "white", activebackground = "blue", activeforeground = "white", height = 3,  width = 7, command = f2)
+b2 = Button(frame, text = "Click Me", fg = "blue", bg = "white", activebackground = "blue", activeforeground = "white", height = 3, width = 7, command = f2)
 b2.pack(side = LEFT, pady = 10)
 
-b3 = Button(frame, text = "Click Me", fg = "green", bg = "white", activebackground = "green", activeforeground = "white", height = 3,  width = 7, command = f3)
+b3 = Button(frame, text = "Click Me", fg = "green", bg = "white", activebackground = "green", activeforeground = "white", height = 3, width = 7, command = f3)
 b3.pack(side = LEFT, padx = 10, pady = 10)
 
 b4 = Button(frame, text = "Click Me", fg = "orange", bg = "white", activebackground = "orange", activeforeground = "white", height = 3,  width = 7, command = f4)

@@ -10,8 +10,8 @@ root = Tk()
 
 ''' GUI Logic(s) '''
 
-root.geometry("192x108+0+0")
-root.title("Piu's Software")
+root.geometry("1920x1080+0+0")
+root.title("Newspaper")
 
 header_label = Label(text = "Welcome to News Today", bg = "black",fg = "white", font = "arial 20 bold", relief = SUNKEN)
 header_label.pack(side = TOP, anchor = "n")
