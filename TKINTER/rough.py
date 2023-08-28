@@ -55,16 +55,39 @@
 
 
 
-from tkinter import *
+# from tkinter import *
 
-root = Tk()
+# root = Tk()
 
-root.geometry("1920x1080")
+# root.geometry("1920x1080")
 
-f1 = Frame(root, relief = SUNKEN, borderwidth = 10)
-f1.grid()
+# f1 = Frame(root)
+# f1.pack()
 
-l1 = Label (f1, text = "Ankan Maity")
-l1.pack()
+# l1 = Label (f1, text = "Ankan Maity", bg = "cyan")
+# l1.grid(row = 0, column = 0)
 
-root.mainloop()
+# l1 = Label (f1, text = "Ankan Maity", bg = "red")
+# l1.grid(row = 0, column = 1)
+
+# l1 = Label (f1, text = "Ankan Maity", bg = "blue")
+# l1.grid(row = 0, column = 2)
+
+# l1 = Label (f1, text = "Ankan Maity", bg = "green")
+# l1.grid(row = 0, column = 3)
+
+# root.mainloop()
+
+# Python3 code to calculate age in years
+
+
+from datetime import date
+
+def calculateAge(birthDate):
+	today = date.today()
+	age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
+	return age
+	
+calculateAge(date(1997, 2, 3))
+
+
