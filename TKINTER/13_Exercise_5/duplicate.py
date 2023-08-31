@@ -15,27 +15,39 @@ root.geometry("1920x1080")
 f1 = Frame(root)
 f1.pack(fill = "x")
 
-# HEADER LABEL
-lb1 = Label(f1, text = "SUCHI'S DANCE CLASSES", bg = "maroon",relief = GROOVE, bd = 7, fg = "white", font = "arial 18 bold", padx = 8, pady = 4)
-lb1.pack(side = TOP, anchor = "center")
-
-# NATARAJA PIC (RIGHT SIDE)
-nataraja_pic = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\13_Exercise_5\\NATARAJA_LOGO.png")
-resized_nataraja_pic = nataraja_pic.resize((170, 170), Image.ANTIALIAS)
-new_nataraja_pic = ImageTk.PhotoImage(resized_nataraja_pic)
-lb2 = Label(f1,image = new_nataraja_pic)
-lb2.pack(side = RIGHT, anchor = "ne", padx = 20)
-
 # DANCE LOGO (LEFT SIDE)
 logo = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\13_Exercise_5\\dance_logo.png")
 resized_logo = logo.resize((170, 170), Image.ANTIALIAS)
 pic = ImageTk.PhotoImage(resized_logo)
 lb3 = Label(f1, image = pic)
-lb3.pack(side = TOP, anchor = "nw", padx = 20)
+lb3.grid(row = 0, column = 0)
+
+# SPACE B\W LOGO AND HEADER
+sp_logo_header = Label(f1, text = "                                                                                                                     ")
+sp_logo_header.grid(row = 0, column = 1)
+
+# HEADER LABEL
+header_lb = Label(f1, text = "SUCHI'S DANCE CLASSES", bg = "maroon",relief = GROOVE, bd = 7, fg = "white", font = "arial 18 bold", padx = 8, pady = 4)
+header_lb.grid(row = 0, column = 2, sticky  = "n")
+
+# ADDRESS AND DETAILS OF INSTITUTE LABEL(s)
+details__lb = Label(f1, text = "14/1, Verner Lane, Belgharia\nKolkata - 700056, West Bengal, India\nPhone - 8617790081, Email - mr.ankanmaity@gmail.com", font = "arial 14", justify = "center")
+details__lb.grid(row = 0, column = 2)
+
+# SPACE B\W HEADER AND NATARAJA PIC
+sp_header_nat = Label(f1, text = "                                                                                                               ")
+sp_header_nat.grid(row = 0, column = 3)
+
+# NATARAJA PIC (RIGHT SIDE)
+nataraja_pic = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\13_Exercise_5\\NATARAJA_LOGO.png")
+resized_nataraja_pic = nataraja_pic.resize((170, 170), Image.ANTIALIAS)
+new_nataraja_pic = ImageTk.PhotoImage(resized_nataraja_pic)
+nataraja_lb = Label(f1,image = new_nataraja_pic)
+nataraja_lb.grid(row = 0, column = 4, sticky = "ne")
 
 # SECOND FRAME
 f2 = Frame(root)
-f2.pack(fill = "x")
+f2.pack(fill = "x", side = TOP)
 
 # CANDIDATE DETAILS LABEL
 lb3 = Label(f2, text = "Candidate Details", font = "arial 18", bg = "black", fg = "white", relief = SUNKEN, bd = 8)
@@ -45,10 +57,12 @@ lb3.pack()
 gap = Label(f2, text = " ")
 gap.pack()
 
+
 # THIRD FRAME
 f3 = Frame(root, height = 200, width = 200)
 # f3.pack_propagate(0)
-f3.pack(fill = "x")
+f3.pack(fill = "x", side = TOP)
+
 
 # NAME LABEL
 name = Label(f3, text = "Name - ", fg = "black", font = "arial 14")
@@ -162,6 +176,21 @@ domain.grid(row = 2, column = 9)
 domain_val = StringVar()
 domain_entry = Entry(f3, textvariable = domain_val)
 domain_entry.grid(row = 2, column = 10, ipadx = 20, ipady = 2)
+
+
+# FOURTH FRAME
+f4 = Frame(root)
+f4.pack(side = TOP, pady = 30, fill = "x")
+
+# COURSE DETAILS LABEL
+c_details = Label(f4, text = "Course Details", font = "arial 18",  bg = "black", fg = "white", relief = SUNKEN, bd = 8)
+c_details.pack(side = TOP, anchor = "n")
+
+# FIFTH FRAME
+f5 = Frame(root)
+f5.pack(side = TOP, fill = "x")
+
+# COURSE TYPE LABEL
 
 
 def get_candidate_details():

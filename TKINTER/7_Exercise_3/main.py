@@ -65,13 +65,7 @@ lb_pic2.grid(row = 0, column = 1)
 s3 = Label(f2, text = "             ")
 s3.grid(row = 0, column = 2)
 
-lb_text2 = Label(f2, text = '''Chandrayaan-3 LIVE Updates: ISRO on Monday said a two-way communication between the Chandrayaan-2 orbiter and Chandrayaan-3's lander module has been established.
-Chandrayaan-3 was launched from the Satish Dhawan Space Centre in Sriharikota on July 14. (Twitter/Isro)
-Chandrayaan-3 was launched from the Satish Dhawan Space Centre in Sriharikota on July 14. (Twitter/Isro)
-"‘Welcome, buddy!’ Ch-2 orbiter formally welcomed Ch-3 LM. Two-way communication between the two is established. MOX has now more routes to reach the LM," the space agency said in a post on X (formerly Twitter).
-On Sunday,  ISRO announced that the lander module of Chandrayaan-3, the third lunar mission of India, is expected to touch down on the surface of the Moon around 6.04 pm on August 23.
-The live telecast of the landing event will begin at 5.20 pm on Wednesday (August 23).
-"The soft landing of Chandrayaan-3 is a monumental moment that not only fuels curiosity but also sparks a passion for exploration within the minds of our youth," the ISRO said on X (formally Twitter).''', font = "arial 12", justify = LEFT, wraplength = 1000)
+lb_text2 = Label(f2, text = '''September has always been an exciting month for tech, particularly due to the fact that Apple unveils its shiny new iPhones in that time. This year, it’s a bit different though, as some surprises and innovations from other players in the tech industry are on the way as well. As we approach the end of August, let’s take a look at what September has in store for us. IFA 2023 One of the world’s largest consumer electronics and home appliances trade show, the Internationale Funkausstellung (IFA) 2023 will take place from September 1 to 5 at the Messe Berlin Exhibition Grounds.''', font = "arial 12", justify = LEFT, wraplength = 800)
 lb_text2.grid(row = 0, column = 3)
 
 
