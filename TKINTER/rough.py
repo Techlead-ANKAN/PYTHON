@@ -81,12 +81,32 @@
 # Python3 code to calculate age in years
 
 
-from datetime import date
+# from datetime import date
 
-def calculateAge(birthDate):
-	today = date.today()
-	age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
-	return age
+# def calculateAge(birthDate):
+# 	today = date.today()
+# 	age = today.year - birthDate.year - ((today.month, today.day) < (birthDate.month, birthDate.day))
+# 	return age
 	
-calculateAge(date(1997, 2, 3))
+# calculateAge(date(1997, 2, 3))
 
+
+from tkinter import *
+
+root1 = Tk()
+root1.title("1st GUI")
+root1.geometry("400x400+80+80")
+
+# root2 = Tk()
+# root2.title("2nd GUI")
+# root2.geometry("400x400+20+20")
+
+def another_gui():
+	root2 = Tk()
+	root2.title("2nd GUI")
+	root2.mainloop()
+
+button = Button(root1, text = "Click Me!!", command = another_gui)
+button.pack()
+
+root1.mainloop()
