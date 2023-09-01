@@ -116,14 +116,6 @@ mob_entry.grid(row = 0, column = 10, ipadx = 20, ipady = 2)
 s4 = Label(f3, text = "            ")
 s4.grid(row = 0, column = 11)
 
-# LOCATION LABEL
-loc = Label(f3, text = "Address - ", fg = "black", font = "arial 14")
-loc.grid(row = 0, column = 12)
-
-# LOCATION ENTRY
-loc_val = StringVar()
-loc_entry = Entry(f3, textvariable = loc_val)
-loc_entry.grid(row = 0, column = 13, ipadx = 88, ipady = 2)
 
 # GAP BETWEEN ROW-0 AND ROW-1
 gap1 = Label(f3, text = "")
@@ -146,7 +138,7 @@ s5.grid(row = 2, column = 2)
 prior_ex = Label(f3, text = "Prior Experience - ", fg = "black", font = "arial 14")
 prior_ex.grid(row = 2, column = 3)
 
-# PRIOR EXPERIENCE ENTRY
+# YES OR NO CHECK BUTTON
 prior_ex_val = StringVar()
 prior_ex_entry = Entry(f3, textvariable = prior_ex_val)
 prior_ex_entry.grid(row = 2, column = 4, ipadx = 42, ipady = 2)
@@ -177,6 +169,19 @@ domain_val = StringVar()
 domain_entry = Entry(f3, textvariable = domain_val)
 domain_entry.grid(row = 2, column = 10, ipadx = 20, ipady = 2)
 
+# GAP BETWEEN ROW-1 AND ROW-2
+gap2 = Label(f3, text = "")
+gap2.grid(row = 3, column = 0)
+
+# LOCATION LABEL
+loc = Label(f3, text = "Address - ", fg = "black", font = "arial 14")
+loc.grid(row = 4, column = 0)
+
+# LOCATION ENTRY
+loc_val = StringVar()
+loc_entry = Entry(f3, textvariable = loc_val)
+loc_entry.grid(row = 4, column = 1, columnspan = 4, ipadx = 88, ipady = 2, sticky = "W")
+
 
 # FOURTH FRAME
 f4 = Frame(root)
@@ -190,7 +195,67 @@ c_details.pack(side = TOP, anchor = "n")
 f5 = Frame(root)
 f5.pack(side = TOP, fill = "x")
 
-# COURSE TYPE LABEL
+# DANCE TYPE LABEL
+d_form = Label(f5, text = "Select Dance style: - (Write 'Yes' to the dance style you want as a subject)", font = "arial 14")
+d_form.grid(row = 0, column = 0)
+
+# GAP B/W DANCE TYPE LABEL AND TYPES
+gap2 = Label(f5, text = "")
+gap2.grid(row = 1, column = 0)
+
+# 6TH FRAME
+f6 = Frame(root)
+f6.pack(side = TOP, fill = "x")
+
+s8 = Label(f6, text = "     ")
+s8.grid(row = 0, column = 0)
+
+# BHARATNATYAM CHECK BUTTON
+d1_val = IntVar()
+Checkbutton(f6, text = "Bharatnatyam", variable = d1_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 1)
+
+s9 = Label(f6, text = "     ")
+s9.grid(row = 0, column = 2)
+
+# KATHAK CHECK BUTTON
+d2_val = IntVar()
+Checkbutton(f6, text = "Kathak", variable = d2_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 3)
+
+s10 = Label(f6, text = "     ")
+s10.grid(row = 0, column = 4)
+
+# ODISSI CHECK BUTTON
+d3_val = IntVar()
+Checkbutton(f6, text = "Odissi", variable = d3_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 5)
+
+s11 = Label(f6, text = "     ")
+s11.grid(row = 0, column = 6)
+
+# JHUMAIR CHECK BUTTON
+d4_val = IntVar()
+Checkbutton(f6, text = "Jhumair", variable = d4_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 7)
+
+s12 = Label(f6, text = "     ")
+s12.grid(row = 0, column = 8)
+
+# INDIAN CLASSICAL DANCE CHECK BUTTON
+d5_val = IntVar()
+Checkbutton(f6, text = "Indian Classical", variable = d5_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 9)
+
+s13 = Label(f6, text = "     ")
+s13.grid(row = 0, column = 10)
+
+# GARBA CHECK BUTTON
+d6_val = IntVar()
+Checkbutton(f6, text = "Garba", variable = d6_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 11)
+
+s14 = Label(f6, text = "     ")
+s14.grid(row = 0, column = 12)
+
+# MOHININATYAM CHECK BUTTON
+d7_val = IntVar()
+Checkbutton(f6, text = "Mohininatyam", variable = d7_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 13)
+
 
 
 def get_candidate_details():

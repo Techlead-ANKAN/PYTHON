@@ -190,7 +190,92 @@ c_details.pack(side = TOP, anchor = "n")
 f5 = Frame(root)
 f5.pack(side = TOP, fill = "x")
 
-# COURSE TYPE LABEL
+# DANCE TYPE LABEL
+d_form = Label(f5, text = "Select Dance style: - (Write 'Yes' to the dance style you want as a subject)", font = "arial 14")
+d_form.grid(row = 0, column = 0)
+
+# GAP B/W DANCE TYPE LABEL AND TYPES
+gap2 = Label(f5, text = "")
+gap2.grid(row = 1, column = 0)
+
+# 6TH FRAME
+f6 = Frame(root)
+f6.pack(side = TOP, fill = "x")
+
+# BHARATNATYAM LABEL
+d1 = Label(f6, text = " Bharatnatyam - ", font = "arial 14")
+d1.grid(row = 0, column = 0, sticky = "W")
+
+# BHARATNATYAM ENTRY
+d1_val = StringVar()
+d1_entry = Entry(f6, textvariable = d1_val)
+d1_entry.grid(row = 0, column = 1, ipady = 2)
+
+# SPACE B/W D1_entry and D2
+s8 = Label(f6, text = "      ")
+s8.grid(row = 0, column = 2)
+
+# KATHAK LABEL
+d2 = Label(f6, text = " Kathak - ", font = "arial 14")
+d2.grid(row = 0, column = 3)
+
+# KATHAK ENTRY
+d2_val = StringVar()
+d2_entry = Entry(f6, textvariable = d2_val)
+d2_entry.grid(row = 0, column = 4, ipady = 2)
+
+# SPACE B/W D2_entry and D3
+s9 = Label(f6, text = "      ")
+s9.grid(row = 0, column = 5)
+
+# KUCHIPUDI LABEL
+d3 = Label(f6, text = " Kuchipudi - ", font = "arial 14")
+d3.grid(row = 0, column = 6)
+
+# KUCHIPUDI ENTRY
+d3_val = StringVar()
+d3_entry = Entry(f6, textvariable = d3_val)
+d3_entry.grid(row = 0, column = 7, ipady = 2)
+
+# SPACE B/W D3_entry and D4
+s10 = Label(f6, text = "      ")
+s10.grid(row = 0, column = 8)
+
+# ODISSI LABEL
+d4 = Label(f6, text = " Odissi - ", font = "arial 14")
+d4.grid(row = 0, column = 9)
+
+# ODISSI ENTRY
+d4_val = StringVar()
+d4_entry = Entry(f6, textvariable = d4_val)
+d4_entry.grid(row = 0, column = 10, ipady = 2)
+
+# SPACE B/W D4_entry and D5
+s11 = Label(f6, text = "      ")
+s11.grid(row = 0, column = 11)
+
+# INDIAN CLASSICAL DANCE
+d5 = Label(f6, text = " Indian Classical - ", font = "arial 14")
+d5.grid(row = 0, column = 12)
+
+# INDIAN CLASSICAL DANCE ENTRY
+d5_val = StringVar()
+d5_entry = Entry(f6, textvariable = d5_val)
+d5_entry.grid(row = 0, column = 13, ipady = 2)
+
+# SPACE B/W D5_entry and D6
+s12 = Label(f6, text = "      ")
+s12.grid(row = 0, column = 14)
+
+# JHUMAIR 
+d6 = Label(f6, text = " Jhumair - ", font = "arial 14")
+d6.grid(row = 0, column = 15)
+
+# JHUMAIR ENTRY
+d6_val = StringVar()
+d6_entry = Entry(f6, textvariable = d6_val)
+d6_entry.grid(row = 0, column = 16, ipady = 2)
+
 
 
 def get_candidate_details():
