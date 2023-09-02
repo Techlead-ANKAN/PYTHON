@@ -27,7 +27,7 @@ sp_logo_header = Label(f1, text = "                                             
 sp_logo_header.grid(row = 0, column = 1)
 
 # HEADER LABEL
-header_lb = Label(f1, text = "SUCHI'S DANCE CLASSES", bg = "maroon",relief = GROOVE, bd = 7, fg = "white", font = "arial 18 bold", padx = 8, pady = 4)
+header_lb = Label(f1, text = "SUCHI'S DANCE CLASSES", bg = "green",relief = GROOVE, bd = 7, fg = "white", font = "arial 18 bold", padx = 8, pady = 4)
 header_lb.grid(row = 0, column = 2, sticky  = "n")
 
 # ADDRESS AND DETAILS OF INSTITUTE LABEL(s)
