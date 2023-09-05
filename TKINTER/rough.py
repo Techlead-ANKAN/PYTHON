@@ -91,25 +91,42 @@
 # calculateAge(date(1997, 2, 3))
 
 
+# from tkinter import *
+
+# root1 = Tk()
+# root1.title("1st GUI")
+# root1.geometry("400x400+80+80")
+
+# # root2 = Tk()
+# # root2.title("2nd GUI")
+# # root2.geometry("400x400+20+20")
+
+# def another_gui():
+# 	root2 = Tk()
+# 	root2.title("2nd GUI")
+# 	root2.mainloop()
+
+# button = Button(root1, text = "Click Me!!", command = another_gui)
+# button.pack()
+
+# root1.mainloop()
+
+
 from tkinter import *
+from PIL import ImageTk, Image
 
-root1 = Tk()
-root1.title("1st GUI")
-root1.geometry("400x400+80+80")
+root = Tk()
+w = 1920
+h = 1080
+root.geometry(f"{w}x{h}")
 
-# root2 = Tk()
-# root2.title("2nd GUI")
-# root2.geometry("400x400+20+20")
+canvas = Canvas(root, width = w, height = h)
+canvas.pack()
 
-def another_gui():
-	root2 = Tk()
-	root2.title("2nd GUI")
-	root2.mainloop()
+img = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\place.jpg")
+resized = img.resize((1920, 1080), Image.ANTIALIAS)
+pic = ImageTk.PhotoImage(resized)
 
-button = Button(root1, text = "Click Me!!", command = another_gui)
-button.pack()
+canvas.create_image((500, 0), image = pic)
 
-root1.mainloop()
-
-
-Ankan & Dweep both have ordered food.
+root.mainloop()

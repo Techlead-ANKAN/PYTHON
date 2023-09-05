@@ -23,7 +23,7 @@ root = Tk()
 root.geometry("300x300")
 
 
-# There are a total of 4 variable class in Tkinter: -  
+# There are a total of 4 variable class in Tkinter & they have 2 function get (used to get the values) and set (used to set the values): -  
 # BooleanVar - Holds Boolean, returns 0 for False and 1 for True
 # StringVar - Holds a string, default value = ""
 # IntVar - Holds an integer, default value = 0

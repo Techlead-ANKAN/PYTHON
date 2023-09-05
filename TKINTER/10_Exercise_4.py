@@ -14,7 +14,7 @@ frame.pack_propagate(0)
 frame.pack(side = TOP, anchor = "n", pady = 200)
 
 def f1():
-    print("I am a Red button.")
+    print("I am a red button.")
 
 def f2():
     print("I am a Blue button.")
