@@ -288,29 +288,71 @@
                 
         
 
-class ICC:
+# class ICC:
 
-    def __init__(self, team):
-        self.team = team 
-        self.trophy = self.achievements()
+#     def __init__(self, team):
+#         self.team = team 
+#         self.trophy = self.achievements()
     
-    def show(self):
-        print(f"Team - {self.team}")
-        self.trophy.show_achievements()
+#     def show(self):
+#         print(f"Team - {self.team}")
+#         self.trophy.show_achievements()
 
     
-    class achievements:
+#     class achievements:
 
-        def __init__(self):
-            self.jersey_color = "Blue"
-            self.captain = "Rohit Sharma"
-            self.star_player = "Virat Kohli"
-            self.coach = "M.S.Dhoni"
+#         def __init__(self):
+#             self.jersey_color = "Blue"
+#             self.captain = "Rohit Sharma"
+#             self.star_player = "Virat Kohli"
+#             self.coach = "M.S.Dhoni"
 
-        def show_achievements(self):
-            print(f"ICC Ranking - 1")
-            print(f"Jersey Color - {self.jersey_color}\nCaptain - {self.captain}\nStar Player - {self.star_player}\nCoach - {self.coach}")
+#         def show_achievements(self):
+#             print(f"ICC Ranking - 1")
+#             print(f"Jersey Color - {self.jersey_color}\nCaptain - {self.captain}\nStar Player - {self.star_player}\nCoach - {self.coach}")
 
-t1 = ICC("INDIA")
+# t1 = ICC("INDIA")
 
-t1.show()
+# t1.show()
+
+
+# class example:
+
+#     def __init__(self, m1,m2,m3):
+#         self.m1 = m1
+#         self.m2 = m2
+#         self.m3 = m3
+
+    
+#     def __add__(self):
+#         # result = self.m1 + self.m2 + self.m3
+#         # print(f"You get: - {result}/300.")
+#         print("Hello Ankan Maity")
+
+
+# obj1 = example(95, 99, 98)
+# obj1.__add__()
+
+
+
+# class A:
+
+#     def show1(self):
+#         print('Function of class A')
+
+# class B:
+
+#     def show2(self):
+#         print("Function of class B")
+
+# class C(A, B):
+
+#     def show3(self):
+#         print("Function of class C")
+
+
+# ob = C()
+
+# ob.show3()
+# ob.show2()
+# ob.show1()

@@ -1,13 +1,4 @@
-# Topics to practice: -
-# 1) String 
-# 2) List 
-# 3) Tuple 
-# 4) Sets 
-# 5) Dictionaries 
-# 6) Loops
-# 7) Functions
-# 8) Recursions
-# 9) File
+# String Practice
 
 
 '''STRINGS PROBLEMS'''

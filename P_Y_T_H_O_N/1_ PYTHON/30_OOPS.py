@@ -605,7 +605,8 @@ print(b/a)
 print(int.__truediv__(b,a))
 
 
-# 11.2) OPERATOR OVERLOADING-->
+# 11.2) OPERATOR OVERLOADING -->  i) The same operator behaves differently depending on the values
+#                                 ii) You can assign new meaning to the operator and you can also extend the functionaluty of the operators
 class student:
     
     def __init__(self,m1,m2):
@@ -670,15 +671,13 @@ print(s1 + s2)
 # Mapping Operators to functions: - [ Link:  https://docs.python.org/3/library/operator.html#:~:text=Mapping%20Operators%20to,gt(a%2C%20b) ]
 
 
-
-
 # 11.3) Method Overloading
 
 # Way 1: Only the latest defined method will be active / considered / will work
 def add(a,b):
     return (a + b)
 
-def add(a,b,c):
+def add(a,b,c):    # Latest defined 
     return (a + b + c)
 
 print(add(1,2))   # Error: - 2 out of 3 positional arguements are given   AS the newly defined function requires 3 arguements
@@ -703,7 +702,7 @@ print(add(1))
 
 
     
-# 11.4) Method Overriding  (pre-requisite - Inheritance)
+# 11.4) Method Overriding  (pre-requisites / requirements - Inheritance)
 
 class A:        # Parent Class
 
@@ -711,7 +710,7 @@ class A:        # Parent Class
         print("In class A")
 
 class B(A):     # Child Class
-# Now class B has gets the "show()" method of class A; here comes Method Overriding, here Class B will override class A's "show()" method with its own "show()" method 
+# Now class B has got the "show()" method of class A; here comes Method Overriding, here Class B will override class A's "show()" method with its own "show()" method 
 
     def show(self):    # Child class method
         print("In Class B")
@@ -735,6 +734,6 @@ obj.show()    # It will call the "show()" method of class A
 
 obj1.show()   #  Result - "In class B"
 
-# **** Applicable for all other types of Inheritance
+# **** NOTE: -Applicable for all other types of Inheritance
 
 
