@@ -46,6 +46,6 @@ a2 = {4, 5, 6}
 print(a1.union(a2))
 
 # set.intersection() -- returns a new set of the common values present in both the set
-a3 = {1, 2 , 3 }
+a3 = {1, 2 , 3}
 a4 = {2, 3 , 4}
 print(a3.intersection(a4))

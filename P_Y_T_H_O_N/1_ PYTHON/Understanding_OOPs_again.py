@@ -233,59 +233,84 @@
 
 
 
-import random
+# import random
 
-class Train:
+# class Train:
+
+#     def __init__(self):
     
-
-
-    def __init__(self):
-    
-        self.name = input("Enter your name: ")
-        self.age = int(input("Enter your age: "))
-        self.gender = input("Enter your gender: ")
-        self.starting_loc = input("Enter starting station: ")
-        self.dest_loc = input("Enter destination station: ")
+#         self.name = input("Enter your name: ")
+#         self.age = int(input("Enter your age: "))
+#         self.gender = input("Enter your gender: ")
+#         self.starting_loc = input("Enter starting station: ")
+#         self.dest_loc = input("Enter destination station: ")
         
 
-    def book_tickets(self):
+#     def book_tickets(self):
         
-        trains_list = ["sealdah to belgharia",
-                       "sealdah to naihati",
-                       "naihati to belgharia",
-                       "sealdah to belgharia",
-                       "dumdum to barrackpore" ]
-        counter = 0
+#         trains_list = ["sealdah to belgharia",
+#                        "sealdah to naihati",
+#                        "naihati to belgharia",
+#                        "sealdah to belgharia",
+#                        "dumdum to barrackpore" ]
+#         counter = 0
 
-        for i in trains_list:
-            if (self.starting_loc.lower() in i) and (self.dest_loc.lower() in i):
-                counter += 1
+#         for i in trains_list:
+#             if (self.starting_loc.lower() in i) and (self.dest_loc.lower() in i):
+#                 counter += 1
             
-        seats = 500
-        filled = 451
+#         seats = 500
+#         filled = 451
 
         
-        if counter != 0:
-            print(f"There are trains available for your route.")
+#         if counter != 0:
+#             print(f"There are trains available for your route.")
 
-            if filled < seats:
-                filled += 1
-                seat_no = random.randrange(filled, seats)
-                print(f"Seat no. - {seat_no} is booked for {self.name}")
-
-
-        else:
-            print(f"There are no trains availablle for your route.")
-            print("No seats left.")
+#             if filled < seats:
+#                 filled += 1
+#                 seat_no = random.randrange(filled, seats)
+#                 print(f"Seat no. - {seat_no} is booked for {self.name}")
 
 
-temp = 1
-while(temp != 0):
-    P1 = Train()
-    P1.book_tickets()
-    print("\nThank you\n")
+#         else:
+#             print(f"There are no trains availablle for your route.")
+#             print("No seats left.")
+
+
+# temp = 1
+# while(temp != 0):
+#     P1 = Train()
+#     P1.book_tickets()
+#     print("\nThank you\n")
 
 # P2 = Train()
 # P2.book_tickets()
                 
         
+
+class ICC:
+
+    def __init__(self, team):
+        self.team = team 
+        self.trophy = self.achievements()
+    
+    def show(self):
+        print(f"Team - {self.team}")
+        self.trophy.show_achievements()
+
+    
+    class achievements:
+
+        def __init__(self):
+            self.jersey_color = "Blue"
+            self.captain = "Rohit Sharma"
+            self.star_player = "Virat Kohli"
+            self.coach = "M.S.Dhoni"
+
+        def show_achievements(self):
+            print(f"ICC Ranking - 1")
+            print(f"Jersey Color - {self.jersey_color}\nCaptain - {self.captain}\nStar Player - {self.star_player}\nCoach - {self.coach}")
+
+t1 = ICC("INDIA")
+
+t1.show()

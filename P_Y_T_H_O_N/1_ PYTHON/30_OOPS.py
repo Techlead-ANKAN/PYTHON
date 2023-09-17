@@ -6,10 +6,10 @@ OOPs in PYTHON
 
 # # 1) CLASS AND OBJECT--->
 class computer:    # DEFINE A CLASS WITH ITS CLASS NAME
-    def config(self):          #DEFINING a method name config that will show the confgiuration of the computer 
+    def config(self):          # DEFINING a method name config that will show the confgiuration of the computer 
         print("Ram - 16gb\nRom - 512GB SSD")      # WHAT THE FUNCTION WILL DO
         
-computer_1 = computer()    # MENTIONING  that : "computer_1" is an obect of class "computer" 
+computer_1 = computer()    # MENTIONING  that : "computer_1" is an obect of the class "computer" 
 
 computer_1.config() # Way-1 to call the function
 # Another way to call the function.
@@ -82,7 +82,7 @@ p1 = computer()   # These are the Constructors   \
 #                                                 >   CONSTRUCTORS   
 p2 = computer()   # These are the constructros   /
 
-p2.name= "Ravi"
+p2.name = "Ravi"
 p2.age2 = 19
 
 # Now there are two oobjects where it can be many more. and u want to call the function update() for a particular object.no computer will choose random object.
@@ -102,11 +102,11 @@ print(p2.age2)
 
 class computer:
     
-    def __init__(self):       #Initializing
-        self.name= "ANKAN"
+    def __init__(self):       # Initializing
+        self.name = "ANKAN"
         self.age = 31
 
-    def compare(self,other):        # Now i am creating a function name compare to compare there age
+    def compare(self,other):        # Now I am creating a function name compare to compare there age
         if self.age==other.age:
            return True
         else:
@@ -117,7 +117,7 @@ person2 = computer()    # Creating objects
 
 
 person2.name = "Ravi"   # Assigning name of person2
-person2.age= 30         # Assigning age of person2
+person2.age = 31         # Assigning age of person2
 
 # Comparing there age
 
@@ -129,21 +129,18 @@ else:
 
 
 
-# # #5) TYPES OF VARIABLES:  (i) Class / Static variables
+# # # 5) TYPES OF VARIABLES:  (i) Class / Static variables
 # # #                      (ii) Instance variables
 
 # # #     (i) Instance variables --> these are the variables whose value changes if the object changes
 class cars:
 
-    def __init__(self):
-        self.mileage = 15
-        self.brand = "BMW"
+    def __init__(self, mil, brand):
+        self.mileage = mil
+        self.brand = brand
 
-car1 = cars()   # INSTANCE VARIABLES
-car2 = cars()   # INSTANCE VARIABLES
-
-car2.mileage = 9
-car2.brand = "Toyota"
+car1 = cars(15, "BMW")   # INSTANCE VARIABLES
+car2 = cars(25, "FERRARI")   # INSTANCE VARIABLES
 
 print(car1.mileage, car1.brand)
 print(car2.mileage, car2.brand)
@@ -157,7 +154,7 @@ class cars:
 
     def __init__(self):
         self.mileage = 15    # Instance namespace
-        self.brand = "BMW"   # Instance namespace
+        self.brand = "BMW"   # Instance namespac
         
 
 car1 = cars()
@@ -165,6 +162,7 @@ car2 = cars()
 
 car2.mileage = 9
 car2.brand = "Toyota"
+
 
 cars.wheels = 8   # This is how you change a class or static variables
 
@@ -176,7 +174,7 @@ print(car2.mileage, car2.brand, car2.wheels)
 # # 6) TYPES OF METHODS-->
 
 # # i) INSTANCE METHOD --> This method requires a self in the class. You can use this self to access any data or methods present in the class.
-# #     (a) ACCESSORS  = They access the value
+# #     (a) ACCESSORS = They access the value
 # #     (b) MUTATORS  = They change the value
 
 class laptop:
@@ -200,7 +198,7 @@ cus_1 = laptop(50000,"HP","Black",5)
 cus_2 = laptop(45000,"DELL","white",7)
 
 print(f'''
-Laptop for customer_1:
+----------Laptop for customer_1----------
 Brand - {cus_1.brand},
 Price - {cus_1.price}/-,
 color - {cus_1.color},
@@ -208,7 +206,7 @@ discount - {cus_1.dis}%,
 Bill - {cus_1.bill()}/- ''')
 
 print(f'''
-Laptop for customer_2:
+----------Laptop for customer_2----------
 Brand - {cus_2.brand},
 Price - {cus_2.price}/-,
 color - {cus_2.color},
@@ -221,7 +219,7 @@ print(f"This is the correct price for laptop of customer 2: {cus_2.price}/-")
 
 
 # # ii) CLASS METHODS --> Works with class variables not instance variables. This methods are bound to class and not the objects in the class
-# # A DECORATOR is required [@classmethod]
+# # A DECORATOR is required [ @classmethod ]
 # # Instead of "self" we will use "cls"
 
 class students:
@@ -239,17 +237,22 @@ class students:
         cls.school = "Adamas"
 
     @classmethod    # DECORATOR
-    def school_name(cls):    # UsE of 'cls'
+    def school_name(cls):    # USE of 'cls'
         return cls.school    
     
 Ankan = students(55,48,98)
 Piu = students(100,99,98)
 Shreya = students(99,100,98)
 
+print("----Before changing school----")
+print(f"Ankan is from {Ankan.school_name()}")
+print(f"piu is from {Piu.school_name()}")
+print(f"Shreya is from {Shreya.school_name()}")
 
 # students.school = "ADAMAS"   # This is how u change value of class variable
 students.change_school()
 
+print("----After changing school----")
 print(f"Ankan is from {Ankan.school_name()}")
 print(f"piu is from {Piu.school_name()}")
 print(f"Shreya is from {Shreya.school_name()}")
@@ -287,7 +290,7 @@ print(f"Piu is from {Piu.school_name()}")
 students.info()   # Calling Static method*
 
 
-# 7) INNER CLASS - Class inside a class -->
+# 7) INNER CLASS - Class inside a class 
 
 class players:                     # OUTER CLASS
 
@@ -308,7 +311,6 @@ class players:                     # OUTER CLASS
             self.age_group = "18-25"
             self.sex = "Male"
             
-
         def show(self):             # INNER METHOD
             print(f"Player Nation- {self.nation}, age group- {self.age_group} and sex is- {self.sex}")
 
@@ -415,6 +417,7 @@ class C(B):          # MULTI-LEVEL INHERITANCE
 
 obj = C()
 
+
 obj.feature_1()
 obj.feature_2()
 obj.feature_3()
@@ -481,7 +484,7 @@ obj = B()
 # Will B call its init or A's init---Yes it will call B's init, if B do not have its own init then it will go for init of super class
 
 
-# 10) super()-->
+# 10) super()--> It is basically used to inherit the __init__ methods of super classes.
 # A - Super class, B - Super class, C - Sub class
 
 class A:

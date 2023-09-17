@@ -196,7 +196,7 @@ f5 = Frame(root)
 f5.pack(side = TOP, fill = "x")
 
 # DANCE TYPE LABEL
-d_form = Label(f5, text = "Select Dance style: - (Write 'Yes' to the dance style you want as a subject)", font = "arial 14")
+d_form = Label(f5, text = "   ⚫ Select Dance style - (Write 'Yes' to the dance style you want as a subject)", font = "arial 14")
 d_form.grid(row = 0, column = 0)
 
 # GAP B/W DANCE TYPE LABEL AND TYPES
@@ -256,7 +256,51 @@ s14.grid(row = 0, column = 12)
 d7_val = IntVar()
 Checkbutton(f6, text = "Mohininatyam", variable = d7_val, font = "arial 14", offvalue = 0, onvalue = 1).grid(row = 0, column = 13)
 
+# GAP B/W DANCE TYPE LABEL AND TYPES
+gap3 = Label(f6, text = "")
+gap3.grid(row = 2, column = 0)
 
+f7 = Frame(root)
+f7.pack(side = TOP, fill = "x")
+
+# BATCHES LABEL
+batch_lb = Label(f7, text = "   ⚫ Select Batch - ", font = "arial 14")
+batch_lb.grid(row = 0, column = 0)
+
+# BATCHES
+batches = ["Monday [4:30p.m.]", "Tuesday [4:30p.m.]", "Wednesday [4:30p.m.]", "Thursday [4:30p.m.]", "Friday [4:30p.m.]", "Saturday [4:30p.m.]", "Sunday [4:30p.m.]"]
+
+value_inside = StringVar(root)
+value_inside.set("Select a Batch")
+
+s15 = Label(f7, text = "   ")
+s15.grid(row = 0, column = 1)
+
+menu = OptionMenu(f7, value_inside, *batches)
+menu.grid(row = 0, column = 2)
+
+# GAP B/W BATCHES AND FEES
+gap4 = Label(f7, text = "")
+gap4.grid(row = 1, column = 0)
+
+f8 = Frame(root)
+f8.pack(side = TOP, fill = "x")
+
+# COURSES LABEL
+course_lb = Label(f8, text = "   ⚫ Select Course - ", font = "arial 14")
+course_lb.grid(row = 0, column = 0)
+
+# COURSES
+courses = ["Bharatnatyam - 1500/-", "Kathak - 1200/-", "Odissi - 1250/-", "Jhumair - 1300/-", "Indian Classical - 1600/-", "Garba - 900/-", "Mohininatyam - 1100/-"]
+
+value_inside = StringVar(root)
+value_inside.set("Select Course - ")
+
+s16 = Label(f8, text = "   ")
+s16.grid(row = 0, column = 1)
+
+menu = OptionMenu(f8, value_inside, *courses)
+menu.grid(row = 0, column = 2)
 
 def get_candidate_details():
 

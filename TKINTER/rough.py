@@ -112,21 +112,29 @@
 # root1.mainloop()
 
 
-from tkinter import *
-from PIL import ImageTk, Image
+# from tkinter import *
+# from PIL import ImageTk, Image
 
-root = Tk()
-w = 1920
-h = 1080
-root.geometry(f"{w}x{h}")
+# root = Tk()
+# w = 1920
+# h = 1080
+# root.geometry(f"{w}x{h}")
 
-canvas = Canvas(root, width = w, height = h)
-canvas.pack()
+# canvas = Canvas(root, bg = "red", width = w, height = h)
+# canvas.pack()
 
-img = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\place.jpg")
-resized = img.resize((1920, 1080), Image.ANTIALIAS)
-pic = ImageTk.PhotoImage(resized)
+# img = Image.open("C:\\Users\\mrank\\OneDrive\\Documents\\###  MY WORKS  ###\\[ BACKEND DEVELOPMENT ]\\[ PYTHON ]\\TKINTER\\place.jpg")
+# resized = img.resize((1575, 850), Image.ANTIALIAS)
+# pic = ImageTk.PhotoImage(resized)
 
-canvas.create_image((500, 0), image = pic)
+# canvas.create_image((750, 425), image = pic)
 
-root.mainloop()
+# frame = Frame(canvas, bg = "red", height = 200, width = 700)
+# frame.pack_propagate(0)
+# frame.pack()
+
+# # header_lb = Label(frame, text = "SUCHI'S DANCE CLASSES", bg = "maroon",relief = GROOVE, bd = 7, fg = "white", font = "arial 18 bold", padx = 8, pady = 4)
+# # header_lb.pack()
+
+# root.mainloop()
+
