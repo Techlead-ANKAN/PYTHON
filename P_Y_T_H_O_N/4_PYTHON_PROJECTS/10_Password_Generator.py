@@ -5,7 +5,7 @@ keys = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O
 
 symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
 num = ['0','1','2','3','4','5', '6', '7', '8', '9']
-len = random.randint(8, 10000)
+len = random.randint(8, 10)
 
 password = ""
 
