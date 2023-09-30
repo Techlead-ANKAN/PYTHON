@@ -8,7 +8,7 @@
 
 
 
-
+Just a Sec  -  You can go to [**Python Discussions**](https://github.com/Techlead-ANKAN/PYTHON/discussions) if you have any kind of doubts related to python and ask your questions over there, you will be getting the reply back very soon and I will make sure that you can overcome your doubt. 
 
 ## **Python Workspace**
 
